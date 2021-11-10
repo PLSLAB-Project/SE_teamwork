@@ -1,0 +1,103 @@
+/* pages/mark/mark.wxss */
+/* pages/speak/speak.wxss */
+/* @import "./styles/iconfont.wxss";*/
+
+/* page,view,text,swiper,swiper-item,image,navigator{
+
+}  */
+
+.bg_1{
+    
+    /* outline-color:black;
+    outline-style:solid;
+    border: 5px solid red; */
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #efefef;
+
+}
+/* .TitleBlock{
+    width: 300rpx ;
+    height: 120rpx ;
+} */
+
+.Title{
+    margin: 30rpx auto;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+
+    width: 750rpx;
+    height: 100rpx;
+}
+
+.bg_2{
+    background-color: white;
+    margin: 0 auto;
+    width: 600rpx ;
+    height: 1500rpx ;
+    border: 4rpx solid #cccccc;
+    border-radius: 30rpx;
+}
+
+.record{
+    margin: 60rpx auto;
+    width: 400rpx ;
+    height: 400rpx ;
+    border: 4rpx solid #cccccc;
+    background-color:rgba(67, 119, 214, 0.3);
+}
+
+#circle_1{
+    margin-top: 50rpx;
+    margin-left: 50rpx;
+    width: 300rpx ;
+    height: 300rpx ;
+    border: 4rpx solid #cccccc;
+    background-color: white;
+    border-radius: 50%;
+}
+
+#circle_2{
+    margin-top: 50rpx;
+    margin-left: 50rpx;
+    width: 200rpx ;
+    height: 200rpx ;
+    border: 4rpx solid #cccccc;
+    background-color:rgba(67, 119, 214, 0.3);
+    border-radius: 50%;
+}
+
+#startOrend{
+    margin-top: 30rpx;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+
+    /* width: 750rpx;
+    height: 100rpx; */
+}
+
+#markRes{
+    margin: 150rpx auto;
+    width: 400rpx ;
+    height: 200rpx ;
+    /* border: 4rpx solid #cccccc; */
+    background-color: rgb(56, 56, 131);
+    color: white;
+    border-radius: 20rpx;
+}
+
+
+#t1{
+    margin: 30rpx auto;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    width: 300rpx;
+    height: 200rpx;
+}
+
+
+
