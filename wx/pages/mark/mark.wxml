@@ -1,0 +1,39 @@
+<!--pages/mark/mark.wxml-->
+<!--pages/speak/speak.wxml-->
+<!-- <text>pages/speak/speak.wxml</text> -->
+<view class="bg_1">
+    <!-- <view class="TitleBlock">
+        <text class="Title">
+            请录制音频
+        </text>
+    </view> -->
+    <text class="Title">
+        
+    </text>
+    <view class="bg_2">
+        <view class="record">
+           <view id="circle_1">
+                <view id="circle_2">
+                    <text id="startOrend" >
+                        开始/结束
+                    </text>
+                      
+                </view>
+             
+           </view>
+             
+              
+        </view>
+             
+       <view id="markRes">
+           <text id="t1" >您的得分为:SSS</text>
+
+       </view>
+         
+          
+    </view>
+      
+      
+
+</view>
+  
