@@ -1,7 +1,10 @@
 {
   "pages":[
+
     "pages/music/music",
     "pages/article/article",
+    "pages/mark/mark" ,
+    "pages/speak/speak" ,
     "pages/index/index",
     "pages/logs/logs"
   ],
