@@ -1,0 +1,20 @@
+
+<!--导航-->
+<view class="linebox">
+  <view class="first-line">
+  <view class="article" >
+    文章
+    <view class="chosed"></view>
+  </view>
+  <view class="music" >
+    歌曲
+    <view class="chosed"></view>
+  </view>
+</view>
+</view>
+
+
+<!--歌曲列表-->
+<view class="musicList">
+  <view class="content" wx:for="{{music}}" wx:for-index="idx" wx:for-item="item" wx:key="item"></view>
+</view>

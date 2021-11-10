@@ -1,0 +1,55 @@
+.linebox {
+  width: 742rpx;
+  height: 142rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2rpx solid rgba(187, 187, 187, 100);
+}
+.first-line {
+  display: flex;
+  justify-content: space-around;
+  height: 64rpx;
+  width: 624rpx;
+ 
+  font-size: 40rpx;
+  text-align: center;
+  font-family: PingFangSC-regular;
+  color: rgba(16, 16, 16, 100);
+}
+.article {
+  width: 200rpx;
+}
+.music {
+  width: 200rpx;
+}
+.chosed {
+  width: 100rpx;
+  height:0rpx;
+  border: 5rpx solid rgba(200, 215, 255, 100);
+  margin-left: 45rpx;
+}
+.article .chosed {
+  display: none;
+}
+
+.musicList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 52rpx;
+  margin-left: 62rpx;
+  width: 630rpx;
+  font-size: 0rpx;
+  border-radius: 24rpx 24rpx 0rpx 0rpx;
+  border: 2rpx solid rgba(187, 187, 187, 100);
+}
+.content {
+margin-top: 46rpx;
+width: 630rpx;
+height: 172rpx;
+line-height: 40rpx;
+text-align: center;
+border: 2rpx solid rgba(187, 187, 187, 100);
+}
