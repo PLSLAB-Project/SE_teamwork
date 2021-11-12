@@ -2,7 +2,7 @@
 <!--导航-->
 <view class="linebox">
   <view class="first-line">
-  <view class="article" >
+  <view class="article" bind:tap="toArticle">
     文章
     <view class="chosed"></view>
   </view>
@@ -18,3 +18,4 @@
 <view class="musicList">
   <view class="content" wx:for="{{music}}" wx:for-index="idx" wx:for-item="item" wx:key="item"></view>
 </view>
+

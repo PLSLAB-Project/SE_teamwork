@@ -6,7 +6,7 @@
     文章
     <view class="chosed"></view>
   </view>
-  <view class="music" >
+  <view class="music" bind:tap="toMusic">
     歌曲
     <view class="chosed"></view>
   </view>
@@ -16,5 +16,5 @@
 
 <!--文章列表-->
 <view class="articleList">
-  <view class="content" wx:for="{{music}}" wx:for-index="idx" wx:for-item="item" wx:key="item"></view>
+  <view class="content" wx:for="{{article}}" wx:for-index="idx" wx:for-item="item" wx:key="item"></view>
 </view>

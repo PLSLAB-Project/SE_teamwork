@@ -11,8 +11,15 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
+  toArticle: function() {
+    wx.navigateBack({
+      delta: 1
+    });
+      
+  },
   onLoad: function (options) {
-
+    //let tabbar = this.selectComponent("#tabbar");
+    //tabbar.run();
   },
 
   /**
