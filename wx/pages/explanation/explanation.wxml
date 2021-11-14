@@ -1,0 +1,10 @@
+<!--pages/explanation/explanation.wxml-->
+<!-- 背景图 -->
+<image class="background" src="https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/背景.png" mode="aspectFill"></image>
+<!-- 点击开始录音转换 -->
+<view class="box1">
+    <image class="huatong" src="https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/首页-话筒.png"></image>
+</view>
+<view class="explain">
+    <text class="text1"> 解 释 </text>
+</view>

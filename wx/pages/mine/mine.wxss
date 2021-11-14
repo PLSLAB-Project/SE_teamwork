@@ -1,0 +1,100 @@
+/* pages/mine/mine.wxss */
+/* 未登录的用户显示区 */
+.user1{
+    width: 100%;
+    height: 300rpx;
+    background-color: burlywood;
+    display: flex;
+}
+.denglv{
+    width: 50%;
+    height: 30%;
+    background-color:greenyellow;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100rpx;
+    margin-left: 200rpx;
+}
+.text1{
+    font-size: 60rpx;
+    font-weight: bolder;
+}
+/* 未登录时的收藏 */
+.collection1{
+    width: 90%;
+    height: 700rpx;
+    border-radius: 30rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: grey;
+    margin-left: 30rpx;
+    margin-top: 50rpx;
+}
+/* 未登录时的收藏 */
+.text2{
+    margin-top: 60rpx;
+    font-size: 60rpx;
+    font-weight: bolder;
+}
+/* 登录后的用户显示 */
+.user2{
+    width: 100%;
+    height: 300rpx;
+    background-image: url(https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/首页-中部背景.png);
+    background-repeat:no-repeat; 
+    background-size:100% 100%;
+    -moz-background-size:100% 100%;
+    display: flex;
+    flex-direction: row;
+}
+.userinfo-avatar{
+    width: 200rpx;
+    height: 200rpx;
+    border-radius: 50%;
+    margin-top: 57rpx;
+    margin-left: 30rpx;
+}
+.userinfo-nickname{
+    width: 400rpx;
+    height: 80rpx;
+    font-size: 45rpx;
+    margin-top: 100rpx;
+    background-color: greenyellow;
+}
+.logout{
+    width: 100rpx;
+    height: 80rpx;
+    font-size: 50rpx;
+    font-weight: bolder;
+    margin-top: 100rpx;
+    background-color: grey;
+}
+/* 登录后的收藏 */
+.collection2{
+    width: 100%;
+    height: 800rpx;
+    border-radius: 30rpx;
+    background-color: grey;
+    margin-top: 50rpx;
+}
+.select{
+    width: 90%;
+    height: 100rpx;
+    background-color: hotpink;
+    margin-left: 30rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.text3{
+    font-size: 60rpx;
+    font-weight: bolder;
+}
+.inner{
+    width: 100%;
+    height: 150rpx;
+    margin-top: 25rpx;
+    background-color: indianred;
+}

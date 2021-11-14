@@ -1,0 +1,48 @@
+ <!-- 整个页面 -->
+  <page>
+  <!-- 未登录 -->
+    <view wx:if="{{!islogin}}" class="unlogined">
+      <!-- 用户显示区域 -->
+      <view   class="user1"> 
+        <view class="denglv" bindtap="getUserProfile"> 
+          <text class="text1">登 录</text> 
+        </view> 
+      </view>
+      <!-- 未登录时的收藏与记录 -->
+      <view class="collection1">
+        <text class="text2">空</text>
+        <text class="text2">空</text>
+        <text class="text2">如</text>
+        <text class="text2">也</text>
+      </view>
+    </view>
+    <!-- 登录后 -->
+    <view  wx:else class="logined">
+      <!-- 用户显示区域 -->
+      <view  class="user2">
+        <image  class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+        <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+        <view class="logout" bindtap="noUserProfile">退出</view>
+      </view>
+      <!-- 登录后的收藏与记录 -->
+      <view class="collection2">
+        <view class="select">
+          <text class="text3" bindtap="collect"> 收藏 </text>
+          <text class="text3" bindtap="record"> 浏览记录 </text>
+        </view>
+        <view wx:if="{{isCollect}}" class="collect-box">
+          <view class="inner"> 收藏111</view>
+          <view class="inner"> 收藏222</view>
+          <view class="inner"> 收藏333</view>
+          <view class="inner"> 收藏444</view>
+        </view>
+        <view wx:else class="record-box">
+          <view class="inner"> 记录111</view>
+          <view class="inner"> 记录222</view>
+          <view class="inner"> 记录333</view>
+          <view class="inner"> 记录444</view>
+        </view>
+      </view>
+    </view>
+  </page>
+

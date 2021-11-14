@@ -1,0 +1,33 @@
+<!--pages/homepage/homepage.wxml-->
+<page>
+<view>
+    <image class="background" src="https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/背景.png" mode="aspectFill"></image>
+</view>
+<view class="h1">
+    闽南话-->普通话
+</view>
+<view class="box1">
+    <text class="text1">点击麦克风开始转换</text>
+    <image class="mai" src="https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/首页-话筒.png" mode="aspectFit" bindtap="turn_to_speak"></image>
+</view>
+<text class="h2">每日系列</text>
+<view class="article_container">
+    <image class="wait" src="https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/首页-中部背景.png" mode="aspectFill"></image>
+    <view class="article">
+        <text class="text">文章1</text>
+        <image class="tu" src="https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/首页-矩形框图片1.png" mode="aspectFill"></image>
+    </view>
+    <view class="article">
+        <text class="text">文章2</text>
+        <image class="tu" src="https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/首页-矩形框图片2.png" mode="aspectFill"></image>
+    </view>
+    <view class="article">
+        <text class="text">文章3</text>
+        <image class="tu" src="https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/首页-矩形框图片3.png" mode="aspectFill"></image>
+    </view>
+    <view class="article">
+        <text class="text">文章4</text>
+        <image class="tu" src="https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/首页-矩形框图片4.png" mode="aspectFill"></image>
+    </view>     
+</view>
+</page>
