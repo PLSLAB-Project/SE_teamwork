@@ -53,3 +53,7 @@ line-height: 40rpx;
 text-align: center;
 border: 2rpx solid rgba(187, 187, 187, 100);
 }
+
+.container {
+  margin-bottom: 100rpx;
+}

@@ -19,3 +19,4 @@
   <view class="content" wx:for="{{music}}" wx:for-index="idx" wx:for-item="item" wx:key="item"></view>
 </view>
 
+<tabBar idx="1"></tabBar>

@@ -1,4 +1,5 @@
 {
   "usingComponents": {
+    "tabBar": "../../custom-tab-bar/tabbar"
   }
 }

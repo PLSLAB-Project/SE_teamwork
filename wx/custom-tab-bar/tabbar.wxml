@@ -1,0 +1,8 @@
+<view class="tab-bar">
+    <block wx:for="{{tabBar}}" wx:key="pagePath">
+        <view class="section_item" bindtap="navigateDetail" data-url="{{item.pagePath}}">
+            <image class="section_image" src="{{item.selected ? item.selectedIconPath : item.iconPath}}"></image>
+            <text class="section_title">{{item.text}}</text>
+        </view>
+    </block>
+</view>
