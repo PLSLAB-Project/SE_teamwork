@@ -15,7 +15,7 @@ Comment ({
         borderStyle: "black",
         list: [
         {
-            "pagePath": "pages/fakeHomepage/fakeHomepage",
+            "pagePath": "pages/homepage/homepage",
             "text": "首页",
             "iconPath": "icons/首页-0.png",
             "selectedIconPath": "icons/首页-1.png"
@@ -32,7 +32,7 @@ Comment ({
             "iconPath": "icons/说方言-0.png",
             "selectedIconPath": "icons/说方言-1.png"
         },{
-            "pagePath": "pages/fakeMine/fakeMine",
+            "pagePath": "pages/mine/mine",
             "text": "我的",
             "iconPath": "icons/我的-0.png",
             "selectedIconPath": "icons/我的-1.png"
