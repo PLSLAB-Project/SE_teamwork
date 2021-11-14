@@ -2,7 +2,7 @@ from flask import Flask, redirect, request, jsonify
 import json
 
 app = Flask(__name__)
-
+# nothing to change now
 
 @app.route('/alwaysRight/reg', methods=["POST"])
 def reg():
