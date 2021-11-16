@@ -5,52 +5,48 @@
 
 }  */
 
-.bg_1{
-    
-    /* outline-color:black;
-    outline-style:solid;
-    border: 5px solid red; */
-    padding: 0;
+.bg{
     margin: 0;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     background-color: #efefef;
 
 }
-/* .TitleBlock{
-    width: 300rpx ;
-    height: 120rpx ;
-} */
 
 .Title{
-    margin: 30rpx auto;
+    /* margin: 30rpx auto; */
     display: flex;
-    align-items:center;
+    /* margin-top: 86rpx; */
+    align-content:center;
     justify-content: center;
-
+    line-height: 75rpx;
     width: 750rpx;
-    height: 100rpx;
+    height: 75rpx;
 }
 
-.bg_2{
+.Container{
+    display: flex;
+    flex-direction: column;
     background-color: white;
     margin: 0 auto;
-    width: 600rpx ;
-    height: 1500rpx ;
+    width: 612rpx ;
+    height: 1116rpx ;
     border: 4rpx solid #cccccc;
     border-radius: 30rpx;
 }
 
 .record{
-    margin: 60rpx auto;
-    width: 400rpx ;
-    height: 400rpx ;
+    display: flex;
+    margin: 64rpx auto;
+    width: 442rpx ;
+    height: 452rpx ;
     border: 4rpx solid #cccccc;
     background-color:rgba(67, 119, 214, 0.3);
+    justify-content: center;
+    align-content: center;
 }
 
 #circle_1{
-    margin-top: 50rpx;
-    margin-left: 50rpx;
+    margin-top: 72rpx;
     width: 300rpx ;
     height: 300rpx ;
     border: 4rpx solid #cccccc;
@@ -69,18 +65,18 @@
 }
 
 #startOrend{
-    margin-top: 30rpx;
+    margin-top: 80rpx;
     display: flex;
-    align-items:center;
     justify-content: center;
-
+    align-content: center;
     /* width: 750rpx;
     height: 100rpx; */
 }
 
 
 #play{
-    margin: 0 auto;
+    margin: 64rpxs;
+    width: 442rpx;
     background-color: rgb(56, 56, 131);
     color: white;
 }
@@ -89,26 +85,34 @@
 
 } */
 .btnList{
-    margin: 50rpx auto;
-    margin-left: 50rpx;
-    margin-right: 50rpx;
     display: flex;
-    flex-direction: row;
+    width: 442rpx;
+    margin: 50rpx auto;
+    margin-top: 110rpx;
+    margin-bottom: 0;
+    justify-content: space-between;
 }
 
-#save{
+.save{
     /* width: 200rpx;
     height: 200rpx; */
     /* margin-right: 100rpx; */
-    margin-left: 60rpx;
+
+    /* margin-left: 60rpx; */
+    margin: 0;
+    width: 170rpx;
+    height: 170rpx;
     background-color: rgb(56, 56, 131);
     color: white;
     border-radius: 15rpx;
 }
 
 #rerecord{
-    margin-right: 60rpx;
-    margin-left: 100rpx;
+    /* margin-right: 60rpx;
+    margin-left: 100rpx; */
+    margin: 0;
+    width: 170rpx;
+    height: 170rpx;
     background-color: rgb(56, 56, 131);
     color: white;
     border-radius: 15rpx;
