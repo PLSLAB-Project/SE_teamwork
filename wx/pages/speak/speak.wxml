@@ -32,6 +32,10 @@
             <button id="save" >保存</button>
             <button id='rerecord'>重录</button>
         </view>
+
+        <view>
+            <button bindtap="InterfaceTest">调用接口测试</button>
+        </view>
           
           
     </view>
