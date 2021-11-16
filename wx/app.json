@@ -3,8 +3,8 @@
     "pages/homepage/homepage",
     "pages/article/article",
     "pages/music/music",
-    "pages/mark/mark" ,
     "pages/speak/speak" ,
+    "pages/mark/mark" ,
     "pages/index/index",
     "pages/logs/logs",
     "pages/mine/mine"
@@ -25,24 +25,20 @@
     "list": [
       {
         "pagePath": "pages/homepage/homepage",
-        "text": "首页",
         "iconPath": "icons/首页-0.png",
         "selectedIconPath": "icons/首页-1.png"
       },
       {
         "pagePath": "pages/article/article",
-        "text": "推送",
         "iconPath": "icons/推送-0.png",
         "selectedIconPath": "icons/推送-1.png"
       },
       {
         "pagePath": "pages/speak/speak",
-        "text": "说方言",
         "iconPath": "icons/说方言-0.png",
         "selectedIconPath": "icons/说方言-1.png"
       },{
         "pagePath": "pages/mine/mine",
-        "text": "我的",
         "iconPath": "icons/我的-0.png",
         "selectedIconPath": "icons/我的-1.png"
       }
