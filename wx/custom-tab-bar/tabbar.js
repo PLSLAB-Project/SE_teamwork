@@ -15,7 +15,7 @@ Component({
   data: {
     tabBar: [
         {
-            "pagePath": "../fakeHomepage/fakeHomepage",
+            "pagePath": "../homepage/homepage",
             "text": "首页",
             "iconPath": "../icons/首页-0.png",
             "selectedIconPath": "../icons/首页-1.png",
@@ -36,7 +36,7 @@ Component({
             "selected": false
           },
           {
-            "pagePath": "../fakeMine/fakeMine",
+            "pagePath": "../mine/mine",
             "text": "我的",
             "iconPath": "../icons/我的-0.png",
             "selectedIconPath": "../icons/我的-1.png",
