@@ -14,6 +14,51 @@ Page({
     onLoad: function (options) {
 
     },
+    InterfaceTest(e){
+        console.log("hi");
+        // let xmlhttp;
+        // if (window.XMLHttpRequest)
+        // {
+        //     //  IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
+        //     xmlhttp=new XMLHttpRequest();
+        // }
+        // else
+        // {
+        //     // IE6, IE5 浏览器执行代码
+        //     xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+        // }
+        // xmlhttp.onreadystatechange=function()
+        // {
+        //     if (xmlhttp.readyState==4 && xmlhttp.status==200)
+        //     {
+        //         console.log( xmlhttp.responseText);
+        //     }
+        // }
+        // xmlhttp.open("POST","http://172.17.173.97:8080/api/user/login",true);
+        // xmlhttp.send("student_id=031902522&password=ycyysjyjn13");
+        let that = this 
+        wx.request({
+        method: 'GET',
+        url: 'https://covid-api.mmediagroup.fr/v1/cases', 
+        // url: "https://tcb-api.tencentcloudapi.com",
+        header: {
+            'content-type': 'application/json' // 默认值
+        },
+        //data: 'student_id=031902522&password=ycyysjyjn13',
+        success: function (res) {
+            console.log(res)
+ 
+        },
+        fail: function () {
+        console.log("fail")
+        },
+        complete: function () {
+            that.setData({
+            isshow:false
+            })
+        } 
+        })
+    },
 
     /**
      * 生命周期函数--监听页面初次渲染完成
