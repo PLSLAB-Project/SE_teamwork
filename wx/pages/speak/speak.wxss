@@ -89,7 +89,7 @@
 
 } */
 .btnList{
-    margin: 100rpx auto;
+    margin: 50rpx auto;
     margin-left: 50rpx;
     margin-right: 50rpx;
     display: flex;
