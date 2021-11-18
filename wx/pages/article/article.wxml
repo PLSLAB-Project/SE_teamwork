@@ -1,4 +1,9 @@
 
+<!-- 背景图片 -->
+<view>
+  <image class="background" src="https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/背景.png" mode="aspectFill"></image>
+</view>
+
 <!--导航-->
 <view class="linebox">
   <view class="first-line">
@@ -13,8 +18,14 @@
 </view>
 </view>
 
-
 <!--文章列表-->
 <view class="articleList">
-  <view class="content" wx:for="{{article}}" wx:for-index="idx" wx:for-item="item" wx:key="item"></view>
+  <view class="content" wx:for="{{article}}" wx:for-index="idx" wx:for-item="item" wx:key="item">
+    <view class="leftContent">
+      <view class="title">{{item.title}}</view>
+      <view class="author">{{item.auth}}</view>
+    </view>
+    <image class="img" src="{{renderImgUrl[idx%4]}}" mode="aspectFill"></image>
+  </view>
 </view>
+
