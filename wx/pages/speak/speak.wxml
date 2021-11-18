@@ -1,35 +1,26 @@
-<view class="bg">
-    <text class="Title">请录制音频</text>
-    <view class="Container">
-        <view class="record">
-           <view id="circle_1">
-                <view id="circle_2">
-                    <text id="startOrend" >开始/结束</text>
-                </view>
-             
-           </view>
-             
-              
-        </view>
-             
-        <view class="audioPlayer">
-            <button id="play">播放</button>
-        </view>
-
-        <view class="btnList">
-            <!-- <button id="save" >保存</button> -->
-            <navigator class="save" url="/pages/mark/mark" >保存</navigator>
-            <button id='rerecord'>重录</button>
-        </view>
-
-        <view>
-            <button bindtap="InterfaceTest">调用接口测试</button>
-        </view>
-          
-          
-    </view>
-      
-      
-
+<view class='bg'>
+    
 </view>
   
+<view class='container'>
+    <view id='circle_1'>
+        <view id='circle_2'>
+            <view id="record">
+                
+            </view>    
+        </view>
+    </view>
+
+
+    <view class="btnList">
+        <button id="audioPlay" style="opacity:0.8">播放</button>
+
+        <button id="save" style="opacity:0.8">保存</button>
+
+        <button id="rerecord" style="opacity:0.8">重录</button>
+    </view>
+      
+    
+      
+      
+</view>
