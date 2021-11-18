@@ -1,23 +1,27 @@
-<view class="bg">
-    <text class="Title">     </text>
-    <view class="Container">
-        <view class="record">
-           <view id="circle_1">
-                <view id="circle_2">
-                    <text id="startOrend" >开始/结束</text>
-                </view>
-             
-           </view>
-
-        </view>
-          
-        <view id="markRes">
-            <text id="score" >您的得分为:SSS</text>
-        </view>
-          
-    </view>
-      
-      
-
+<view class='bg'>
+    
 </view>
   
+<view class='container'>
+    <view id='circle_1'>
+        <view id='circle_2'>
+            <view id="record">
+                
+            </view>    
+        </view>
+    </view>
+
+
+    <view id="markRes">
+            <text id="tip" >您的得分为:</text>
+
+            <text id="score" >SSS</text>
+          
+          
+       
+    </view>
+      
+    
+      
+      
+</view>
