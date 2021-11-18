@@ -1,123 +1,72 @@
-/* pages/speak/speak.wxss */
-/* @import "./styles/iconfont.wxss";*/
-
-/* page,view,text,swiper,swiper-item,image,navigator{
-
-}  */
-
 .bg{
-    margin: 0;
-    /* box-sizing: border-box; */
-    background-color: #efefef;
-
+    width: 100%;
+    height: 100%;
+    position:fixed; 
+    z-index: -1;
+    background-image: url('https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/背景.png');
+    background-size: 100% 100%;
 }
 
-.Title{
-    /* margin: 30rpx auto; */
-    display: flex;
-    /* margin-top: 86rpx; */
-    align-content:center;
-    justify-content: center;
-    line-height: 75rpx;
-    width: 750rpx;
-    height: 75rpx;
-}
-
-.Container{
+.container{
     display: flex;
     flex-direction: column;
-    background-color: white;
-    margin: 0 auto;
-    width: 612rpx ;
-    height: 1116rpx ;
-    border: 4rpx solid #cccccc;
-    border-radius: 30rpx;
-}
+    padding: 0;
 
-.record{
-    display: flex;
-    margin: 64rpx auto;
-    width: 442rpx ;
-    height: 452rpx ;
-    border: 4rpx solid #cccccc;
-    background-color:rgba(67, 119, 214, 0.3);
-    justify-content: center;
-    align-content: center;
+
 }
 
 #circle_1{
     margin-top: 72rpx;
-    width: 300rpx ;
-    height: 300rpx ;
+    width: 400rpx ;
+    height: 400rpx ;
     border: 4rpx solid #cccccc;
     background-color: white;
     border-radius: 50%;
 }
 
 #circle_2{
-    margin-top: 50rpx;
-    margin-left: 50rpx;
-    width: 200rpx ;
-    height: 200rpx ;
+    margin-top: 40rpx;
+    margin-left: 40rpx;
+    width: 320rpx ;
+    height: 320rpx ;
     border: 4rpx solid #cccccc;
-    background-color:rgba(67, 119, 214, 0.3);
+    background-color: black;
     border-radius: 50%;
+    background-image: url('https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/背景.png');
+    background-size: 100% 100%;
 }
 
-#startOrend{
-    margin-top: 80rpx;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    /* width: 750rpx;
-    height: 100rpx; */
+#record{
+    margin-top: 90rpx;
+    margin-left: 90rpx;
+    width: 140rpx;
+    height: 140rpx;
+    background-image: url('https://img2020.cnblogs.com/blog/1925168/202111/1925168-20211118195452831-258542016.png');
+    background-size: 100% 100%;
 }
 
 
-#play{
-    margin: 64rpxs;
-    width: 442rpx;
-    background-color: rgb(56, 56, 131);
-    color: white;
-}
-
-/* #save{
-
-} */
 .btnList{
     display: flex;
-    width: 442rpx;
-    margin: 50rpx auto;
-    margin-top: 110rpx;
-    margin-bottom: 0;
-    justify-content: space-between;
+    flex-direction: column;
+    margin-top: 100rpx;
 }
 
-.save{
-    /* width: 200rpx;
-    height: 200rpx; */
-    /* margin-right: 100rpx; */
+#audioPlay{
+   margin-top: 50rpx;
+   margin-bottom: 0rpx;
+   width: 440rpx;
+}
 
-    /* margin-left: 60rpx; */
-    margin: 0;
-    width: 170rpx;
-    height: 170rpx;
-    background-color: rgb(56, 56, 131);
-    color: white;
-    border-radius: 15rpx;
+#save{
+   margin-top: 50rpx;
+   margin-bottom: 0rpx;
+   width: 440rpx;
+   /* background-color: rgba(red, green, blue, 0); */
 }
 
 #rerecord{
-    /* margin-right: 60rpx;
-    margin-left: 100rpx; */
-    margin: 0;
-    width: 170rpx;
-    height: 170rpx;
-    background-color: rgb(56, 56, 131);
-    color: white;
-    border-radius: 15rpx;
+   margin-top: 50rpx;
+   margin-bottom: 0rpx;
+   width: 440rpx;
 }
-
-
-
-
