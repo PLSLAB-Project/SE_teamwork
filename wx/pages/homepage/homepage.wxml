@@ -22,7 +22,8 @@
 </view>
 <!-- 文章列表 -->
 <view class="article_container">
-    <image class="wait" src="https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/首页-中部背景.png" mode="aspectFill"></image>
+    <image class="picture1" src="https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/首页-中部背景.png" mode="aspectFill"></image>
+    <image class="picture2" src="https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/首页-小鹤.png" mode="aspectFill" ></image>
     <view class="article">
         <view class="text">
             <text class="title">{{title1}}</text>
