@@ -2,7 +2,9 @@
   "pages":[
     "pages/homepage/homepage",
     "pages/article/article",
+    "pages/articleContent/articleContent",
     "pages/music/music",
+    "pages/musicPlayer/musicPlayer",
     "pages/speak/speak" ,
     "pages/mark/mark" ,
     "pages/index/index",

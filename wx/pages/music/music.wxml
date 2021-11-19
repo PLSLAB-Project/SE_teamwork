@@ -1,22 +1,30 @@
+<view class="page">
+  <image class="background" src="https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/背景.png" mode="aspectFill"></image>
 
-<!--导航-->
-<view class="linebox">
-  <view class="first-line">
-  <view class="article" bind:tap="toArticle">
-    文章
-    <view class="chosed"></view>
+  <!--导航-->
+  <view class="linebox">
+    <view class="first-line">
+      <view class="article" bind:tap="toArticle">
+        文章
+        <view class="chosed"></view>
+      </view>
+      <view class="music">
+        歌曲
+        <view class="chosed"></view>
+      </view>
+    </view>
   </view>
-  <view class="music" >
-    歌曲
-    <view class="chosed"></view>
+    
+  <!--歌曲列表-->
+  <view class="musicList">
+    <view class="content" wx:for="{{music}}" wx:for-index="idx" wx:for-item="item" wx:key="item" bind:tap="toPlay">
+      <view class="leftContent">
+        <view class="title">{{item.title}}</view>
+        <view class="author">{{item.auth}}</view>
+      </view>
+      <image class="img" src="{{renderImgUrl[idx%4]}}" mode="aspectFill"></image>
+    </view>
   </view>
-</view>
-</view>
 
-
-<!--歌曲列表-->
-<view class="musicList">
-  <view class="content" wx:for="{{music}}" wx:for-index="idx" wx:for-item="item" wx:key="item"></view>
+  <tabBar idx="1"></tabBar>
 </view>
-
-<tabBar idx="1"></tabBar>

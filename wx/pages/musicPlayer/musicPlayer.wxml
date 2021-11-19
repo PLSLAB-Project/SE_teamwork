@@ -1,0 +1,17 @@
+<image class="background" src="https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/背景.png" mode="aspectFill"></image>
+<view class="page">
+    <view class="content">
+        <view class="disk">
+            <image class="" src="https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/播放音乐-唱片.png" mode="aspectFill"/>
+        </view>
+        <view class="collect">
+            收藏
+        </view>
+        <view class="play">
+            <image class="pre" src="https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/播放音乐-上一首.png" mode="aspectFill"></image>
+            <image class="pause" src="https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/播放音乐-播放键.png" mode="aspectFill"></image>
+            <image class="nxt" src="https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/播放音乐-下一首.png" mode="aspectFill"></image>
+        </view>
+    </view>
+      
+</view>

@@ -1,0 +1,62 @@
+.page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.background {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-size: 100% 100%;
+    z-index: -1;
+  }
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    width: 550rpx;
+    height: 1000rpx;
+}
+.disk {
+    width: 340rpx;
+    height: 340rpx;
+}
+.disk image {
+    width: 100%;
+    height: 100%;
+}
+.collect {
+    width: 550rpx;
+    height: 100rpx;
+    background-color: #434985;
+    text-align: center;
+    line-height: 100rpx;
+    font-size: 36rpx;
+    color: white;
+    border-radius: 18rpx;
+}
+.play {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 360rpx;
+    width: 550rpx;
+}
+
+.pre {
+    width: 68rpx;
+    height: 54rpx;
+}
+.nxt {
+    width: 68rpx;
+    height: 54rpx;
+}
+.pause {
+    width: 138rpx;
+    height: 138rpx;
+}
+
+  

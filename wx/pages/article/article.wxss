@@ -1,10 +1,11 @@
-.background{
+.background {
   width: 100%;
   height: 100%;
-  position:fixed; 
-  background-size:100% 100%;
+  position: fixed;
+  background-size: 100% 100%;
   z-index: -1;
 }
+
 .linebox {
   width: 742rpx;
   height: 142rpx;
@@ -14,29 +15,34 @@
   border: 2rpx solid rgba(187, 187, 187, 100);
   background-color: white;
 }
+
 .first-line {
   display: flex;
   justify-content: space-around;
   height: 64rpx;
   width: 624rpx;
- 
+
   font-size: 40rpx;
   text-align: center;
   font-family: PingFangSC-regular;
   color: rgba(16, 16, 16, 100);
 }
+
 .article {
   width: 200rpx;
 }
+
 .music {
   width: 200rpx;
 }
+
 .chosed {
   width: 100rpx;
   height: NaNpx;
   border: 5rpx solid rgba(200, 215, 255, 100);
   margin-left: 45rpx;
 }
+
 .music .chosed {
   display: none;
 }
@@ -50,10 +56,11 @@
   margin-left: 62rpx;
   width: 630rpx;
   font-size: 0rpx;
-  border-radius: 24rpx 24rpx 0rpx 0rpx;
+  border-radius: 24rpx 24rpx 24rpx 24rpx;
   border: 2rpx solid rgba(187, 187, 187, 100);
   background-color: white;
 }
+
 .content {
   display: flex;
   margin-top: 46rpx;
@@ -63,10 +70,16 @@
   text-align: center;
   border: 2rpx solid white;
 }
+
+.content:last-child {
+  margin-bottom: 22rpx;
+}
+
 .articleList .content .leftContent {
   display: flex;
   flex-direction: column;
 }
+
 .articleList .content .title {
   width: 300rpx;
   height: 40rpx;
@@ -76,6 +89,7 @@
   text-align: left;
   font-family: PingFangSC-regular;
 }
+
 .articleList .content .author {
   margin-left: 40rpx;
   margin-top: 6rpx;
@@ -84,6 +98,7 @@
   text-align: left;
   font-family: PingFangSC-regular;
 }
+
 .articleList .content .img {
   height: 100%;
   border-radius: 5%;
