@@ -59,42 +59,68 @@
 .userinfo-nickname{
     width: 400rpx;
     height: 80rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 120rpx;
+    /* background-color: greenyellow; */
+}
+.text4{
     font-size: 45rpx;
-    margin-top: 100rpx;
-    background-color: greenyellow;
 }
 .logout{
     width: 100rpx;
     height: 80rpx;
-    font-size: 50rpx;
-    font-weight: bolder;
-    margin-top: 100rpx;
-    background-color: grey;
+    margin-top: 50rpx;
+    /* background-color: grey; */
 }
 /* 登录后的收藏 */
 .collection2{
     width: 100%;
     height: 800rpx;
-    border-radius: 30rpx;
-    background-color: grey;
-    margin-top: 50rpx;
+    background-color: white;
 }
 .select{
     width: 90%;
-    height: 100rpx;
-    background-color: hotpink;
+    height: 70rpx;
     margin-left: 30rpx;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
 .text3{
-    font-size: 60rpx;
-    font-weight: bolder;
+    font-size: 50rpx;
+    margin-top: 10rpx;
 }
 .inner{
-    width: 100%;
-    height: 150rpx;
-    margin-top: 25rpx;
-    background-color: indianred;
+    display: flex;
+    flex-direction: row;
+    width:85%; 
+    margin-left: 50rpx;
+    height: 170rpx;
+    margin-top: 15rpx;
+    border-radius: 30rpx;
+}
+.text{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+.title{
+    font-size: 35rpx;
+    margin-top: 10rpx;
+    margin-left: 20rpx;
+}
+.write{
+    font-size: 30rpx;
+    margin-top: 10rpx;
+    margin-left: 40rpx;
+}
+.time{
+    font-size: 30rpx;
+    margin-left: 20rpx;
+}
+.tu{
+    width: 40%;
+    height: 100%;
 }

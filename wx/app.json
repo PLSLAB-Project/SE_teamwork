@@ -1,6 +1,8 @@
 {
   "pages":[
+  
     "pages/homepage/homepage",
+    "pages/explanation/explanation",
     "pages/article/article",
     "pages/articleContent/articleContent",
     "pages/music/music",

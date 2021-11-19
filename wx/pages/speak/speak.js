@@ -38,11 +38,16 @@ Page({
         // xmlhttp.send("student_id=031902522&password=ycyysjyjn13");
         let that = this 
         wx.request({
-        method: 'GET',
-        url: 'https://covid-api.mmediagroup.fr/v1/cases', 
+        method: 'POST',
+        url: 'http://101.43.7.157:8000/alwaysRight/kongoREG', 
         // url: "https://tcb-api.tencentcloudapi.com",
         header: {
             'content-type': 'application/json' // 默认值
+        },
+        data: {
+            "Username":"0",
+            "Password":"1",
+            "NickName":"140"
         },
         //data: 'student_id=031902522&password=ycyysjyjn13',
         success: function (res) {
