@@ -26,5 +26,5 @@
     </view>
   </view>
 
-  <tabBar idx="1"></tabBar>
 </view>
+<tabBar idx="1"></tabBar>
