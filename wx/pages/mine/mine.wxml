@@ -9,13 +9,92 @@
         </view> 
       </view>
       <!-- 未登录时的收藏与记录 -->
-      <image class="bg" src="https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/背景.png" mode="scaleToFill"></image>
+      <view class="collection2">
+        <view class="select">
+          <text class="text3" bindtap="collect"> 收藏 </text>
+          <text class="text3" bindtap="record"> 浏览记录 </text>
+        </view>
+        <!-- 收藏显示 -->
+        <view wx:if="{{isCollect}}" class="collect-box">
+          <view class="inner"> 
+            <view class="text">
+              <text class="title">{{title1}}</text>
+              <text class="write">{{write1}}</text>
+            </view>
+            <image class="tu" src="https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/首页-矩形框图片1.png" mode="aspectFill"></image>
+          </view>
+          <view class="inner">
+            <view class="text">
+              <text class="title">{{title2}}</text>
+              <text class="write">{{write2}}</text>
+          </view>
+          <image class="tu" src="https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/首页-矩形框图片2.png" mode="aspectFill"></image>
+          </view>
+          <view class="inner"> 
+            <view class="text">
+              <text class="title">{{title3}}</text>
+              <text class="write">{{write3}}</text>
+          </view>
+          <image class="tu" src="https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/首页-矩形框图片3.png" mode="aspectFill"></image>
+          </view>
+          <view class="inner"> 
+            <view class="text">
+              <text class="title">{{title4}}</text>
+              <text class="write">{{write4}}</text>
+          </view>
+          <image class="tu" src="https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/首页-矩形框图片4.png" mode="aspectFill"></image>
+          </view>
+          <view class="inner"> 
+            <view class="text">
+              <text class="title">{{title5}}</text>
+              <text class="write">{{write5}}</text>
+          </view>
+          <image class="tu" src="https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/首页-矩形框图片1.png" mode="aspectFill"></image>
+          </view>
+        </view>
+        <!-- 浏览记录显示 -->
+        <view wx:else class="record-box">
+          <view class="inner"> 
+            <view class="text">
+              <text class="title">{{title5}}</text>
+              <text class="write">{{write5}}</text>
+              <text class="time">{{time1}}</text>
+          </view>
+          <image class="tu" src="https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/首页-矩形框图片4.png" mode="aspectFill"></image>
+          </view>
+          <view class="inner"> 
+            <view class="text">
+              <text class="title">{{title4}}</text>
+              <text class="write">{{write4}}</text>
+              <text class="time">{{time2}}</text>
+          </view>
+          <image class="tu" src="https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/首页-矩形框图片3.png" mode="aspectFill"></image>
+          </view>
+          <view class="inner"> 
+            <view class="text">
+              <text class="title">{{title3}}</text>
+              <text class="write">{{write3}}</text>
+              <text class="time">{{time3}}</text>
+          </view>
+          <image class="tu" src="https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/首页-矩形框图片2.png" mode="aspectFill"></image>
+          </view>
+          <view class="inner"> 
+            <view class="text">
+              <text class="title">{{title2}}</text>
+              <text class="write">{{write2}}</text>
+              <text class="time">{{time4}}</text>
+          </view>
+          <image class="tu" src="https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/首页-矩形框图片1.png" mode="aspectFill"></image>
+          </view>
+        </view>
+      </view>
+      <!-- <image class="bg" src="https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/背景.png" mode="scaleToFill"></image>
       <view class="collection1">
         <text class="text2">空</text>
         <text class="text2">空</text>
         <text class="text2">如</text>
         <text class="text2">也</text>
-      </view>
+      </view> -->
     </view>
     <!-- 登录后 -->
     <view  wx:else class="logined">
