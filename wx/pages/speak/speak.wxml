@@ -13,9 +13,13 @@
 
 
     <view class="btnList">
-        <button id="audioPlay" style="opacity:0.8">播放</button>
+        <button id="audioPlay" style="opacity:0.8">
+            播放    
+        </button>
 
-        <button id="save" style="opacity:0.8">保存</button>
+        <button id="save" style="opacity:0.8">
+            <navigator class="" target="" url="/pages/mark/mark" hover-class="navigator-hover" open-type="navigate">保存 </navigator>   
+        </button>
 
         <button id="rerecord" style="opacity:0.8">重录</button>
     </view>
