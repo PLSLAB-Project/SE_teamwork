@@ -1,8 +1,9 @@
 {
   "pages":[
+  
     "pages/homepage/homepage",
-    "pages/article/article",
     "pages/explanation/explanation",
+    "pages/article/article",
     "pages/music/music",
     "pages/speak/speak" ,
     "pages/mark/mark" ,
