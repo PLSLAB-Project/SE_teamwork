@@ -1,5 +1,20 @@
 Page({
     data: {
+      title1:"闽南话的魅力",
+      title2:"学听闽南话",
+      title3:"闽南语抗疫热词TOP9",
+      title4:"听阿姆讲童谣",
+      title5:"一片冰心在玉壶",
+      write1:"陈建新",
+      write2:"黄芩",
+      write3:"小南",
+      write4:"小北",
+      write5:"世界华声",
+      time1:"2021-11-19",
+      time2:"2021-11-19",
+      time3:"2021-11-19",
+      time4:"2021-11-19",
+
       userInfo: {},
       islogin:false,
       isCollect:true,
