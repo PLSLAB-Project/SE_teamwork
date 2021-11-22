@@ -1,6 +1,4 @@
-.page {
-  padding-bottom: 95rpx;
-}
+
 
 .background {
   width: 100%;
