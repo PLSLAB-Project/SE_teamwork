@@ -13,7 +13,7 @@
 
 
     <view class="btnList">
-        <button id="audioPlay" style="opacity:0.8">
+        <button id="audioPlay" style="opacity:0.8" >
             播放    
         </button>
 
@@ -22,6 +22,7 @@
         </button>
 
         <button id="rerecord" style="opacity:0.8">重录</button>
+        <button bindtap="InterfaceTest1">测试接口</button>
     </view>
       
     
