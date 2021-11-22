@@ -3,8 +3,9 @@
 .user1{
     width: 100%;
     height: 300rpx;
-    background-color: burlywood;
+    background-image: url(https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/首页-中部背景.png);
     display: flex;
+    opacity: 0.9;
 }
 .denglv{
     width: 50%;
@@ -21,36 +22,11 @@
     font-size: 60rpx;
     font-weight: bolder;
 }
-/* .bg{
-    width: 100%;
-    height: 70%;
-    position:fixed; 
-    z-index: -1;
-}
-.collection1{
-    width: 90%;
-    height: 700rpx;
-    border-radius: 30rpx;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background:rgba(255, 255, 255, 0.75);
-    margin-left: 30rpx;
-    margin-top: 50rpx;
-}
-.text2{
-    margin-top: 60rpx;
-    font-size: 60rpx;
-    font-weight: bolder;
-} */
-/* 登录后的用户显示 */
 .user2{
     width: 100%;
     height: 300rpx;
     background-image: url(https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/首页-中部背景.png);
-    background-repeat:no-repeat; 
-    background-size:100% 100%;
-    -moz-background-size:100% 100%;
+    opacity: 0.9;
     display: flex;
     flex-direction: row;
 }
@@ -75,8 +51,7 @@
 .logout{
     width: 100rpx;
     height: 80rpx;
-    margin-top: 50rpx;
-    /* background-color: grey; */
+    margin-top: 110rpx;
 }
 /* 登录后的收藏 */
 .collection2{
@@ -127,4 +102,6 @@
 .tu{
     width: 40%;
     height: 100%;
+    border-radius: 10rpx;
+    opacity: 0.7;
 }
