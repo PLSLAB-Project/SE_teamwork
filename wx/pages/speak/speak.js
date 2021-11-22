@@ -64,6 +64,33 @@ Page({
         } 
         })
     },
+    InterfaceTest1(e){
+        console.log("hi");
+        let that = this 
+        wx.request({
+        method: 'POST',
+        url: 'http://101.43.7.157:8000/alwaysRight/reg', 
+        header: {
+            'content-type': 'application/json' // 默认值
+        },
+        //data: 'student_id=031902522&password=ycyysjyjn13',
+        data: {
+            phone: '19859092005',
+        },
+        success: function (res) {
+            console.log(res)
+
+        },
+        fail: function () {
+        console.log("fail")
+        },
+        complete: function () {
+            that.setData({
+            isshow:false
+            })
+        } 
+        })
+    },
 
     /**
      * 生命周期函数--监听页面初次渲染完成
