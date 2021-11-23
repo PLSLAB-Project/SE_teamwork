@@ -1,0 +1,12 @@
+<button bindtap="Test_reg">reg</button>
+<button bindtap="Test_setInfoByUserId">setInfoByUserId</button>
+<button bindtap="Test_logIn">logIn</button>
+<button bindtap="Test_logOut">logOut</button>
+<button bindtap="Test_checkLogin">checkLogin</button>
+<button bindtap="Test_getRandomWork">获取推送文章</button>
+<button bindtap="Test_getRandomAudio">获取推送歌曲</button>
+<button bindtap="Test_getUserLikeById">获取喜欢</button>
+<button bindtap="Test_saveUserIcon">saveUserIcon</button>
+<button bindtap="Test_getSomethingByUrl">通过url获取东西</button>
+<button bindtap="Test_uploadAudio4Score">uploadAudioScore</button>
+<button bindtap="Test_uploadAudio4text">uploadAudiotext</button>
