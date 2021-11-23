@@ -10,7 +10,7 @@
 </view>
 <!-- 框 -->
 <view class="box1" >
-    <text class="text1">点 击 麦 克 风 开 始 转 换</text>
+    <text class="text1">点击麦克风开始转换</text>
     <image class="mai" src="https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/首页-话筒.png" mode="aspectFit" bindtap="turn_to_explanation"></image>
 </view>
 <!-- 每日系列四个字的排列 -->
