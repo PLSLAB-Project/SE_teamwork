@@ -1,17 +1,31 @@
 // pages/musicPlayer/musicPlayer.js
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    innerAudioContext:{}
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
+  pause: function() {
+    let innerAudioContext = this.innerAudioContext;
+    console.log("AAAA");
+    console.log(innerAudioContext);
+    if (innerAudioContext.paused) {
+      innerAudioContext.play();
+    }
+    else {
+      innerAudioContext.pause();
+    }
+},
   onLoad: function (options) {
+    this.innerAudioContext = wx.createInnerAudioContext();
+    this.innerAudioContext.src = 'https://m801.music.126.net/20211123193014/16d433bbd38a2f8a837d4a7224f09790/jdyyaac/obj/w5rDlsOJwrLDjj7CmsOj/10356414551/1ba5/582f/f360/e2079115a13dfa96cc211b9a76654c5a.m4a';
 
   },
 
@@ -40,7 +54,7 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-
+    this.innerAudioContext.destroy();
   },
 
   /**
