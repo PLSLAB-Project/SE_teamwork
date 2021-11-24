@@ -10,3 +10,4 @@
 <button bindtap="Test_getSomethingByUrl">通过url获取东西</button>
 <button bindtap="Test_uploadAudio4Score">uploadAudioScore</button>
 <button bindtap="Test_uploadAudio4text">uploadAudiotext</button>
+<button bindtap="Test_getUserHistory">getUserHistory</button>
