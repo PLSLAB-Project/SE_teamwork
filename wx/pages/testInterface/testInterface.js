@@ -14,8 +14,8 @@ Page({
     onLoad: function (options) {
 
     },
-    Test_reg(e){//暂不可用
-        console.log("hi");
+    Test_reg(e){//可用
+        console.log("Test_reg");
         let that = this 
         wx.request({
         method: 'POST',
@@ -23,9 +23,8 @@ Page({
         header: {
             'content-type': 'application/json' // 默认值
         },
-        //data: 'student_id=031902522&password=ycyysjyjn13',
         data: {
-            phone: '19859092005',
+            phone: '19859092005',//这里的phone参数是某用户的电话号码
         },
         success: function (res) {
             console.log(res)
@@ -41,7 +40,7 @@ Page({
         } 
         })
     },
-    Test_setInfoByUserId(e){
+    Test_setInfoByUserId(e){//暂不可用
         console.log("hi");
         let that = this 
         wx.request({
@@ -50,7 +49,6 @@ Page({
         header: {
             'content-type': 'application/json' // 默认值
         },
-        //data: 'student_id=031902522&password=ycyysjyjn13',
         data: {
             phone: '19859092005',
         },
@@ -69,16 +67,13 @@ Page({
         })
     },
     Test_logIn(e){
-        console.log("hi");
+        console.log("Test_logIn");
         let that = this 
         wx.request({
         method: 'POST',
         url: 'http://101.43.7.157:8000/alwaysRight/logIn', 
         header: {
             'content-type': 'application/json' // 默认值
-        },
-        data:{
-            Phone:'19859092005'
         },
         data:{
             Phone:'19859092005'
@@ -98,17 +93,13 @@ Page({
         })
     },
     Test_logOut(e){
-        console.log("hi");
+        console.log("Test_logOut");
         let that = this 
         wx.request({
         method: 'POST',
-        url: 'http://101.43.7.157:8000/alwaysRight/reg', 
+        url: 'http://101.43.7.157:8000/alwaysRight/logOut', 
         header: {
             'content-type': 'application/json' // 默认值
-        },
-        //data: 'student_id=031902522&password=ycyysjyjn13',
-        data: {
-            phone: '19859092005',
         },
         success: function (res) {
             console.log(res)
@@ -125,17 +116,13 @@ Page({
         })
     },
     Test_checkLogin(e){
-        console.log("hi");
+        console.log("Test_checkLogin");
         let that = this 
         wx.request({
         method: 'POST',
-        url: 'http://101.43.7.157:8000/alwaysRight/reg', 
+        url: 'http://101.43.7.157:8000/alwaysRight/checkLogin', 
         header: {
             'content-type': 'application/json' // 默认值
-        },
-        //data: 'student_id=031902522&password=ycyysjyjn13',
-        data: {
-            phone: '19859092005',
         },
         success: function (res) {
             console.log(res)
@@ -152,17 +139,13 @@ Page({
         })
     },
     Test_getRandomWork(e){//可用
-        console.log("hi");
+        console.log("Test_getRandomWork");
         let that = this 
         wx.request({
         method: 'POST',
-        url: 'http://101.43.7.157:8000/alwaysRight/reg', 
+        url: 'http://101.43.7.157:8000/alwaysRight/getRandomWork', 
         header: {
             'content-type': 'application/json' // 默认值
-        },
-        //data: 'student_id=031902522&password=ycyysjyjn13',
-        data: {
-            phone: '19859092005',
         },
         success: function (res) {
             console.log(res)
@@ -179,17 +162,13 @@ Page({
         })
     },
     Test_getRandomAudio(e){
-        console.log("hi");
+        console.log("Test_getRandomAudio");
         let that = this 
         wx.request({
         method: 'POST',
-        url: 'http://101.43.7.157:8000/alwaysRight/reg', 
+        url: 'http://101.43.7.157:8000/alwaysRight/getRandomAudio', 
         header: {
             'content-type': 'application/json' // 默认值
-        },
-        //data: 'student_id=031902522&password=ycyysjyjn13',
-        data: {
-            phone: '19859092005',
         },
         success: function (res) {
             console.log(res)
@@ -206,17 +185,13 @@ Page({
         })
     },
     Test_getUserLikeById(e){
-        console.log("hi");
+        console.log("Test_getUserLikeById");
         let that = this 
         wx.request({
         method: 'POST',
-        url: 'http://101.43.7.157:8000/alwaysRight/reg', 
+        url: 'http://101.43.7.157:8000/alwaysRight/getUserLikeById', 
         header: {
             'content-type': 'application/json' // 默认值
-        },
-        //data: 'student_id=031902522&password=ycyysjyjn13',
-        data: {
-            phone: '19859092005',
         },
         success: function (res) {
             console.log(res)
@@ -233,17 +208,13 @@ Page({
         })
     },
     Test_saveUserIcon(e){
-        console.log("hi");
+        console.log("Test_saveUserIcon");
         let that = this 
         wx.request({
         method: 'POST',
-        url: 'http://101.43.7.157:8000/alwaysRight/reg', 
+        url: 'http://101.43.7.157:8000/alwaysRight/saveUserIcon', 
         header: {
             'content-type': 'application/json' // 默认值
-        },
-        //data: 'student_id=031902522&password=ycyysjyjn13',
-        data: {
-            phone: '19859092005',
         },
         success: function (res) {
             console.log(res)
@@ -260,21 +231,20 @@ Page({
         })
     },
     Test_getSomethingByUrl(e){
-        console.log("hi");
+        console.log("Test_getSomethingByUrl");
         let that = this 
         wx.request({
         method: 'POST',
-        url: 'http://101.43.7.157:8000/alwaysRight/reg', 
+        url: 'http://101.43.7.157:8000/alwaysRight/getSomethingByUrl', 
         header: {
             'content-type': 'application/json' // 默认值
-        },
-        //data: 'student_id=031902522&password=ycyysjyjn13',
-        data: {
-            phone: '19859092005',
         },
         success: function (res) {
             console.log(res)
 
+        },
+        data:{
+            url:''
         },
         fail: function () {
         console.log("fail")
@@ -287,7 +257,7 @@ Page({
         })
     },
     Test_uploadAudio4Score(e){
-        console.log("hi");
+        console.log("Test_uploadAudio4Score");
         let that = this 
         wx.request({
         method: 'POST',
@@ -313,7 +283,7 @@ Page({
         })
     },
     Test_uploadAudio4text(e){
-        console.log("hi");
+        console.log("Test_uploadAudio4text");
         let that = this 
         wx.request({
         method: 'POST',
@@ -339,6 +309,34 @@ Page({
         } 
         })
     },
+    Test_getUserHistory(e){
+        console.log("Test_getUserHistory");
+        let that = this 
+        wx.request({
+        method: 'POST',
+        url: 'http://101.43.7.157:8000/alwaysRight/reg', 
+        header: {
+            'content-type': 'application/json' // 默认值
+        },
+        //data: 'student_id=031902522&password=ycyysjyjn13',
+        data: {
+            phone: '19859092005',
+        },
+        success: function (res) {
+            console.log(res)
+
+        },
+        fail: function () {
+        console.log("fail")
+        },
+        complete: function () {
+            that.setData({
+            isshow:false
+            })
+        } 
+        })
+    },
+  
   
     InterfaceTest3r(res){
         console.log("hi");
