@@ -1,13 +1,15 @@
 <!--pages/explanation/explanation.wxml-->
-<!-- 背景图 -->
-<image class="background" src="https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/背景.png" mode="aspectFill"></image>
-<!-- 空白透明view站位 -->
-<view class="empty"></view>
-<!-- 点击开始录音转换 -->
-<view class="box1" >
-    <text class="text1">点击麦克风开始转换</text>
-    <image class="mai" src="https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/首页-话筒.png" mode="aspectFit" ></image>
-</view>
-<view class="explain">
-    <text class="text2">释 义</text>
-</view>
+<page>
+    <!-- 背景图 -->
+    <image class="background" src="https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/背景.png" mode="aspectFill"></image>
+    <!-- 空白透明view站位 -->
+    <view class="empty"></view>
+    <!-- 点击开始录音转换 -->
+    <view class="box1" >
+        <text class="text1">点击麦克风开始转换</text>
+        <image class="mai" src="https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/首页-话筒.png" mode="aspectFit" ></image>
+    </view>
+    <view class="explain">
+        <text class="text2">释 义</text>
+    </view>
+</page>
