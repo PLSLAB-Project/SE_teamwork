@@ -7,7 +7,7 @@
 <view class="linebox">
   <view class="first-line">
     <view class="article">
-      文章
+      <view>文章</view>      
       <view class="chosed"></view>
     </view>
     <view class="music" bind:tap="toMusic">

@@ -1,9 +1,9 @@
 {
   "pages":[
-    "pages/testInterface/testInterface",
-    "pages/homepage/homepage",
-    "pages/explanation/explanation",
     "pages/article/article",
+    "pages/homepage/homepage",
+    "pages/testInterface/testInterface",
+    "pages/explanation/explanation",
     "pages/articleContent/articleContent",
     "pages/music/music",
     "pages/musicPlayer/musicPlayer",
