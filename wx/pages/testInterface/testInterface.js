@@ -1,4 +1,3 @@
-// pages/test6/test6.js
 Page({
 
     /**
@@ -40,8 +39,8 @@ Page({
         } 
         })
     },
-    Test_setInfoByUserId(e){//暂不可用
-        console.log("hi");
+    Test_setInfoByUserId(e){//可用
+        console.log("Test_setInfoByUserId");
         let that = this 
         wx.request({
         method: 'POST',
@@ -66,7 +65,7 @@ Page({
         } 
         })
     },
-    Test_logIn(e){
+    Test_logIn(e){//可用
         console.log("Test_logIn");
         let that = this 
         wx.request({
@@ -83,7 +82,7 @@ Page({
 
         },
         fail: function () {
-        console.log("fail")
+            console.log("fail")
         },
         complete: function () {
             that.setData({
@@ -92,7 +91,7 @@ Page({
         } 
         })
     },
-    Test_logOut(e){
+    Test_logOut(e){//可用
         console.log("Test_logOut");
         let that = this 
         wx.request({
@@ -115,7 +114,7 @@ Page({
         } 
         })
     },
-    Test_checkLogin(e){
+    Test_checkLogin(e){//暂不可用
         console.log("Test_checkLogin");
         let that = this 
         wx.request({
@@ -161,7 +160,7 @@ Page({
         } 
         })
     },
-    Test_getRandomAudio(e){
+    Test_getRandomAudio(e){//暂不可用
         console.log("Test_getRandomAudio");
         let that = this 
         wx.request({
@@ -184,7 +183,7 @@ Page({
         } 
         })
     },
-    Test_getUserLikeById(e){
+    Test_getUserLikeById(e){//暂不可用
         console.log("Test_getUserLikeById");
         let that = this 
         wx.request({
@@ -192,6 +191,9 @@ Page({
         url: 'http://101.43.7.157:8000/alwaysRight/getUserLikeById', 
         header: {
             'content-type': 'application/json' // 默认值
+        },
+        data:{
+            phone:'19859092005'
         },
         success: function (res) {
             console.log(res)
@@ -291,7 +293,6 @@ Page({
         header: {
             'content-type': 'application/json' // 默认值
         },
-        //data: 'student_id=031902522&password=ycyysjyjn13',
         data: {
             phone: '19859092005',
         },
@@ -309,22 +310,20 @@ Page({
         } 
         })
     },
-    Test_getUserHistory(e){
+    Test_getUserHistory(e){//暂不可用
         console.log("Test_getUserHistory");
         let that = this 
         wx.request({
         method: 'POST',
-        url: 'http://101.43.7.157:8000/alwaysRight/reg', 
+        url: 'http://101.43.7.157:8000/alwaysRight/getUserHistory', 
         header: {
             'content-type': 'application/json' // 默认值
         },
-        //data: 'student_id=031902522&password=ycyysjyjn13',
-        data: {
-            phone: '19859092005',
+        data:{
+            phone:'19859092005'
         },
         success: function (res) {
             console.log(res)
-
         },
         fail: function () {
         console.log("fail")
@@ -338,49 +337,6 @@ Page({
     },
   
   
-    InterfaceTest3r(res){
-        console.log("hi");
-        let that = this ;
-        const tempFilePaths = res.tempFilePaths
-        wx.uploadFile({
-            url: 'http://101.43.7.157:8000/alwaysRight/uploadAudio4Score', //仅为示例，非真实的接口地址
-            filePath: tempFilePaths[0],
-            name: 'file',
-            formData: {
-                'user': 'test'
-            },
-            success (res){
-                const data = res.data
-                //do something
-            }
-        })
-    },
-    InterfaceTest5(res){
-        console.log("hi");
-        let that = this 
-        wx.request({
-        method: 'POST',
-        url: 'http://101.43.7.157:8000/alwaysRight/getRandomWork', 
-        header: {
-            'content-type': 'application/json' // 默认值
-        },
-        //data: 'student_id=031902522&password=ycyysjyjn13',
-        data: {
-        },
-        success: function (res) {
-            console.log(res)
-
-        },
-        fail: function () {
-        console.log("fail")
-        },
-        complete: function () {
-            that.setData({
-            isshow:false
-            })
-        } 
-        })
-    },
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
