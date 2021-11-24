@@ -1,1 +1,4 @@
 /* pages/testInterface/testInterface.wxss */
+button{
+    margin: 2rpx;
+}
