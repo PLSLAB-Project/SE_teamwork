@@ -1,31 +1,31 @@
-<view class='bg'>
+<!-- <page > -->
+    <view class='bg'>
     
-</view>
-  
-<view class='container'>
-    <view id='circle_1'>
-        <view id='circle_2'>
-            <view id="record">
-                
-            </view>    
+    </view>
+      
+    <view class='container'>
+        <view id='circle'>
+            <!-- <view id='circle_2'> -->
+                <view id="record">
+                </view>   
+            <!-- </view> -->
+             
         </view>
-    </view>
-
-
-    <view class="btnList">
-        <button id="audioPlay" style="opacity:0.8" >
-            播放    
-        </button>
-
-        <button id="save" style="opacity:0.8">
-            <navigator class="" target="" url="/pages/mark/mark" hover-class="navigator-hover" open-type="navigate">保存 </navigator>   
-        </button>
-
-        <button id="rerecord" style="opacity:0.8">重录</button>
-        <!-- <button bindtap="InterfaceTest1">测试接口</button> -->
-    </view>
-      
     
-      
-      
-</view>
+    
+        <view class="btnList">
+            <button id="audioPlay" style="opacity:0.8" >播放</button>
+    
+            <button id="save" style="opacity:0.8">
+                <navigator  class="" target="" url="/pages/mark/mark" hover-class="navigator-hover" open-type="navigate"> 保存 </navigator>   
+            </button>
+    
+            <button id="rerecord" style="opacity:0.8">重录</button>
+            <!-- <button bindtap="InterfaceTest1">测试接口</button> -->
+        </view>
+          
+        
+          
+          
+    </view>
+<!-- </page> -->
