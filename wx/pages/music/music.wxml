@@ -25,6 +25,5 @@
       <image class="img" src="{{renderImgUrl[idx%4]}}" mode="aspectFill"></image>
     </view>
   </view>
-
-</view>
 <tabBar idx="1"></tabBar>
+</view>

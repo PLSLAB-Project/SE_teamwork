@@ -1,5 +1,7 @@
 
-
+.page {
+  padding-bottom: 95rpx;
+}
 .background {
   width: 100%;
   height: 100%;
@@ -36,13 +38,16 @@
 
 .music {
   width: 200rpx;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .chosed {
-  width: 100rpx;
-  height: 0rpx;
-  border: 5rpx solid rgba(200, 215, 255, 100);
-  margin-left: 45rpx;
+  width: 120rpx;
+  height: 5rpx;
+  background-color: #090a13;
 }
 
 .article .chosed {
@@ -68,10 +73,12 @@
   display: flex;
   margin-top: 46rpx;
   width: 630rpx;
-  height: 140rpx;
+  height: 180rpx;
   line-height: 40rpx;
   text-align: center;
-  border: 2rpx solid white;
+  border-radius: 20rpx;
+  box-shadow: 0rpx 1rpx 1rpx 2rpx rgb(224, 224, 219);
+
 }
 
 .content:last-child {

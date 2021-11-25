@@ -25,7 +25,7 @@ Page({
 },
   onLoad: function (options) {
     this.innerAudioContext = wx.createInnerAudioContext();
-    this.innerAudioContext.src = 'https://m801.music.126.net/20211123193014/16d433bbd38a2f8a837d4a7224f09790/jdyyaac/obj/w5rDlsOJwrLDjj7CmsOj/10356414551/1ba5/582f/f360/e2079115a13dfa96cc211b9a76654c5a.m4a';
+    this.innerAudioContext.src = 'http://music.163.com/song/media/outer/url?id=1869929814.mp3';
 
   },
 

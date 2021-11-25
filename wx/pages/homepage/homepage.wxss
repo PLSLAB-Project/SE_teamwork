@@ -1,4 +1,7 @@
 /* pages/homepage/homepage.wxss */
+page{
+    height: 100%;
+}
 .background{
     width: 100%;
     height: 100%;
@@ -8,97 +11,104 @@
     opacity: 0.5;
 }
 .h1{
+    height: 4%;
     display: flex;
     flex-direction: column;
     align-items: center;
     font-size: 40rpx;
-    font-weight: bolder;
-    height: 10%;
 }
 .box1{
-    width: 600rpx;
-    height: 70rpx;
+    width: 90%;
+    height: 6%;
     display: flex;
     flex-direction: row;
-    margin-top: 10rpx;
-    margin-left: 90rpx;
-    border-radius: 20rpx;
-    background:rgba(255, 255, 255, 0.3);
-    border: 3rpx solid;
+    margin-top: 20rpx;
+    margin-left: 40rpx;
+    border-radius: 15rpx;
+    background:white;
 }
 .text1{
     margin-top: 15rpx;
-    margin-left: 50rpx;
-    font-size: 35rpx;
+    margin-left: 10rpx;
+    font-size: 30rpx;
     color: #A0A0A0;
 }
 .mai{
-    margin-top: 20rpx;
-    margin-left: 180rpx;
+    margin-top: 19rpx;
+    margin-left: 350rpx;
     width: 35rpx;
     height: 35rpx;
 }
 .h2{
     width: 80%;
-    margin-left: 80rpx;
-    margin-top: 10rpx;
+    margin-left: 50rpx;
     display: flex;
     font-size: 60rpx;
-    font-weight: bold;
     color: #434985;
-    flex-direction: row;
-    font-weight: bolder;
 }
-.article_container{
-    margin-left: 40rpx;
+.box2{
     width: 90%;
     height: 80%;
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    border-radius: 30rpx;
+    margin-left: 40rpx;
     background-color: white;
+    border-radius: 30rpx;
+
 }
+/* 中部背景 */
 .picture1{
     width: 100%;
-    height: 200rpx;
+    height: 30%;
     border-radius: 30rpx;
     position: relative;
-    z-index: 1;
+    z-index: 2;
 }
 .picture2{
-    width: 150rpx;
-    height: 150rpx;
+    margin-left: 200rpx;
     position: absolute;
-    z-index: 2;
+    z-index: 100;
+}
+/* 文章列表 */
+.article_container{
+    width: 100%;
+    height: 68%;
+    margin-top: 20rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+    border-radius: 30rpx;
+    background-color: white;
 }
 .article{
     display: flex;
     flex-direction: row;
-    width:100%; 
-    height: 150rpx;
+    width:95%; 
+    height: 180rpx;
     margin-top: 15rpx;
-    border-radius: 30rpx;
+    margin-left: 15rpx;
+    border-radius: 20rpx;
+    box-shadow:0rpx 1rpx  1rpx 2rpx rgb(224, 224, 219);
 }
 .text{
-    width: 60%;
+    width: 53%;
+    height: 100%;
     display: flex;
     flex-direction: column;
+    
 }
 .title{
     font-size: 35rpx;
-    margin-top: 15rpx;
+    margin-top: 20rpx;
     margin-left: 20rpx;
     color: #454B86;
 }
 .write{
     font-size: 30rpx;
-    margin-top: 10rpx;
+    margin-top: 20rpx;
     margin-left: 20rpx;
     color: #6369A6;
 }
 .tu{
-    width: 40%;
+    width: 47%;
     height: 100%;
-    opacity: 0.7;
+    border-radius: 20rpx;
 }
