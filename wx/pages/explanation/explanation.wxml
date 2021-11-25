@@ -10,6 +10,6 @@
         <image class="mai" src="https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/首页-话筒.png" mode="aspectFit" ></image>
     </view>
     <view class="explain">
-        <text class="text2">释 义</text>
+        <text class="text2" >释 义</text>
     </view>
 </page>
