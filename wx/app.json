@@ -1,12 +1,12 @@
 {
   "pages":[
     "pages/article/article",
+    "pages/musicPlayer/musicPlayer",
     "pages/homepage/homepage",
     "pages/testInterface/testInterface",
     "pages/explanation/explanation",
     "pages/articleContent/articleContent",
     "pages/music/music",
-    "pages/musicPlayer/musicPlayer",
     "pages/speak/speak" ,
     "pages/mark/mark" ,
     "pages/index/index",

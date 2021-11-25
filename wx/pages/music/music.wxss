@@ -62,32 +62,26 @@
   margin-top: 52rpx;
   margin-left: 62rpx;
   width: 630rpx;
-  height: 100%;
   font-size: 0rpx;
   border-radius: 24rpx 24rpx 24rpx 24rpx;
-  border: 2rpx solid rgba(187, 187, 187, 100);
+  border: 1rpx solid white;
   background-color: white;
 }
 
 .content {
   display: flex;
   margin-top: 46rpx;
-  width: 630rpx;
-  height: 180rpx;
-  line-height: 40rpx;
-  text-align: center;
+  width: 95%;
+  height: 160rpx;
   border-radius: 20rpx;
-  box-shadow: 0rpx 1rpx 1rpx 2rpx rgb(224, 224, 219);
-
-}
-
-.content:last-child {
-  margin-bottom: 22rpx;
+  border-color: white;
+  box-shadow:0rpx 15rpx 10rpx -10rpx  rgb(224, 224, 219);
 }
 
 .musicList .content .leftContent {
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
 .musicList .content .title {
@@ -97,7 +91,7 @@
   margin-top: 20rpx;
   font-size: 30rpx;
   text-align: left;
-  font-family: PingFangSC-regular;
+  color: #454B86;
 }
 
 .musicList .content .author {
@@ -106,12 +100,13 @@
   width: 300rpx;
   font-size: 26rpx;
   text-align: left;
-  font-family: PingFangSC-regular;
+  color: #6369A6;
 }
 
 .musicList .content .img {
-  height: 100%;
-  border-radius: 5%;
+  height: 95%;
+  width: 40%;
+  border-radius: 20rpx;
 }
 
 .container {
