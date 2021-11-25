@@ -1,17 +1,15 @@
 {
   "pages":[
-    "pages/article/article",
-    "pages/musicPlayer/musicPlayer",
     "pages/homepage/homepage",
-    "pages/testInterface/testInterface",
     "pages/explanation/explanation",
+    "pages/article/article",
     "pages/articleContent/articleContent",
     "pages/music/music",
     "pages/speak/speak" ,
     "pages/mark/mark" ,
     "pages/index/index",
     "pages/logs/logs",
-
+    "pages/testInterface/testInterface",
     "pages/mine/mine"
     
   ],

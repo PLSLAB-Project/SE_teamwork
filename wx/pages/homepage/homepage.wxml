@@ -1,67 +1,71 @@
 <!--pages/homepage/homepage.wxml-->
 <page>
     <!-- 背景图设置 -->
-<view>
-    <image class="background" src="https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/背景.png" mode="aspectFill"></image>
-</view>
-<!-- 顶上文字描述 -->
-<view class="h1">
-    闽南话-->普通话
-</view>
-<!-- 框 -->
-<view class="box1" >
-    <text class="text1">点击麦克风开始转换</text>
-    <image class="mai" src="https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/首页-话筒.png" mode="aspectFit" bindtap="turn_to_explanation"></image>
-</view>
-<!-- 每日系列四个字的排列 -->
-<view class="h2">
-    <text>每日系列</text>
-</view>
-<!-- 文章列表 -->
-<scroll-view class="article_container">
-    <image class="picture1" src="https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/首页-中部背景.png" mode="aspectFill"></image>
-    <image class="picture2" src="https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/首页-小鹤.png" mode="aspectFill" ></image>
-    <view class="article">
-        <view class="text">
-            <text class="title">{{title1}}</text>
-            <text class="write">{{write1}}</text>
-        </view>
-        <image class="tu" src="https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/首页-矩形框图片1.png" mode="center"></image>
+    <view>
+        <image class="background" src="https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/背景.png" mode="aspectFill"></image>
     </view>
-    <view class="article">
-        <view class="text">
-            <text class="title">{{title2}}</text>
-            <text class="write">{{write2}}</text>
-        </view>
-        <image class="tu" src="https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/首页-矩形框图片2.png" mode="center"></image>
+    <!-- 顶上文字描述 -->
+    <view class="h1">
+        闽南话-->普通话
     </view>
-    <view class="article">
-        <view class="text">
-            <text class="title">{{title3}}</text>
-            <text class="write">{{write3}}</text>
-        </view>
-        <image class="tu" src="https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/首页-矩形框图片3.png" mode="center"></image>
+    <!-- 框 -->
+    <view class="box1" >
+        <text class="text1">点击麦克风开始转换</text>
+        <image class="mai" src="https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/首页-话筒.png" mode="aspectFit" bindtap="turn_to_explanation"></image>
     </view>
-    <view class="article">
-        <view class="text">
-            <text class="title">{{title4}}</text>
-            <text class="write">{{write4}}</text>
-        </view>
-        <image class="tu" src="https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/首页-矩形框图片4.png" mode="center"></image>
-    </view>  
-    <view class="article">
-        <view class="text">
-            <text class="title">{{title4}}</text>
-            <text class="write">{{write4}}</text>
-        </view>
-        <image class="tu" src="https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/首页-矩形框图片4.png" mode="center"></image>
+    <!-- 每日系列四个字的排列 -->
+    <view class="h2">
+        <text>每日系列</text>
     </view>
-    <view class="article">
-        <view class="text">
-            <text class="title">{{title4}}</text>
-            <text class="write">{{write4}}</text>
-        </view>
-        <image class="tu" src="https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/首页-矩形框图片4.png" mode="center"></image>
-    </view>   
-</scroll-view>
+    <!-- 中部背景+文章列表 -->
+    <view class="box2">
+        <!-- 中部背景 -->
+        <image class="picture1" src="https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/首页-中部背景.png" mode="aspectFill"></image>
+        <image class="picture2" src="https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/首页-小鹤.png"></image>
+        <!-- 文章列表 -->
+        <scroll-view scroll-y="true" class="article_container">
+                <view class="article">
+                    <view class="text">
+                        <text class="title">{{title1}}</text>
+                        <text class="write">{{write1}}</text>
+                    </view>
+                    <image class="tu" src="https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/首页-矩形框图片1.png" mode="center"></image>
+                </view>
+                <view class="article">
+                    <view class="text">
+                        <text class="title">{{title2}}</text>
+                        <text class="write">{{write2}}</text>
+                    </view>
+                    <image class="tu" src="https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/首页-矩形框图片2.png" mode="center"></image>
+                </view>
+                <view class="article">
+                    <view class="text">
+                        <text class="title">{{title3}}</text>
+                        <text class="write">{{write3}}</text>
+                    </view>
+                    <image class="tu" src="https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/首页-矩形框图片3.png" mode="center"></image>
+                </view>
+                <view class="article">
+                    <view class="text">
+                        <text class="title">{{title4}}</text>
+                        <text class="write">{{write4}}</text>
+                    </view>
+                    <image class="tu" src="https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/首页-矩形框图片4.png" mode="center"></image>
+                </view>  
+                <view class="article">
+                    <view class="text">
+                        <text class="title">{{title4}}</text>
+                        <text class="write">{{write4}}</text>
+                    </view>
+                    <image class="tu" src="https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/首页-矩形框图片4.png" mode="center"></image>
+                </view>
+                <view class="article">
+                    <view class="text">
+                        <text class="title">{{title4}}</text>
+                        <text class="write">{{write4}}</text>
+                    </view>
+                    <image class="tu" src="https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/首页-矩形框图片4.png" mode="center"></image>
+                </view>  
+        </scroll-view>
+    </view>
 </page>
