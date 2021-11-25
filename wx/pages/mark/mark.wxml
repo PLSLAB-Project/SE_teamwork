@@ -3,12 +3,12 @@
 </view>
   
 <view class='container'>
-    <view id='circle_1'>
-        <view id='circle_2'>
+    <view id='circle'>
+        <!-- <view id='circle_2'> -->
             <view id="record">
-                
-            </view>    
-        </view>
+            </view>   
+        <!-- </view> -->
+         
     </view>
 
 
