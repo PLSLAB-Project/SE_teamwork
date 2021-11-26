@@ -1,18 +1,26 @@
 // pages/mark/mark.js
+let appData = getApp().globalData;
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-
+        score:"S"
     },
-
+    setScore: function () {
+        let that = this;
+        console.log(appData.score);
+        that.setData({
+            score:appData.score
+        })
+    },
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-
+        let that = this;
+        that.setScore();
     },
 
     /**
@@ -26,7 +34,8 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function () {
-
+        let that = this;
+        that.setScore();
     },
 
     /**
