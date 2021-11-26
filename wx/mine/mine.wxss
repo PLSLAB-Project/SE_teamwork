@@ -1,0 +1,153 @@
+/* pages/mine/mine.wxss */
+/* 未登录的用户显示区 */
+page {
+    height: 100%;
+    width: 100%;
+}
+.unlogined{
+    height: 100%;
+    width: 100%;
+}
+.logined{
+    height: 100%;
+    width: 100%;
+}
+.user1{
+    width: 100%;
+    height: 20%;
+    background-image: url(https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/首页-中部背景.png);
+    opacity: 0.9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.input{
+    height: 80rpx;
+    width: 500rpx;
+    margin-top: 30rpx;
+    background-color: white;
+    opacity: 0.5;
+}
+.placeholder{
+    font-size: 40rpx;
+}
+.denglv{
+    width: 40%;
+    height: 30%;
+    background-color:greenyellow;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40rpx;
+    border-radius: 20rpx;
+}
+.text1{
+    font-size: 40rpx;
+    font-weight: bolder;
+}
+.user2{
+    width: 100%;
+    height: 20%;
+    background-image: url(https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/首页-中部背景.png);
+    opacity: 0.9;
+    display: flex;
+    flex-direction: row;
+}
+.userinfo-avatar{
+    width: 150rpx;
+    height: 150rpx;
+    border-radius: 50%;
+    margin-top: 37rpx;
+    margin-left: 40rpx;
+}
+.userinfo-nickname{
+    width: 400rpx;
+    height: 80rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 80rpx;
+    margin-left: 80rpx;
+}
+.text4{
+    font-size: 40rpx;
+}
+.logout{
+    width: 100rpx;
+    height: 80rpx;
+    margin-top: 80rpx;
+}
+/* 收藏与浏览记录 */
+.collection{
+    width: 100%;
+    height: 80%;
+}
+.abox{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 10%;
+    justify-content: space-around;
+    position: relative;
+    padding-top: 20rpx;
+    font-size: 45rpx;
+}
+.tabTrue{
+    color: black;
+}
+.b{
+    background:black;
+    height: 7rpx;
+    width:190rpx;
+    position: absolute;
+    bottom: 0;
+    transition: all .11s linear;
+}
+.text3{
+    font-size: 50rpx;
+    margin-top: 10rpx;
+}
+.scroll-box{
+    height: 88%;
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 2%;
+}
+.inner{
+    display: flex;
+    flex-direction: row;
+    width:90%; 
+    margin-left: 5%;
+    height: 190rpx;
+    margin-bottom: 15rpx;
+    border-radius: 30rpx;
+    box-shadow:0rpx 1rpx  1rpx 2rpx rgb(224, 224, 219);
+}
+.text{
+    width: 53%;
+    display: flex;
+    flex-direction: column;
+}
+.title{
+    font-size: 35rpx;
+    margin-top: 10rpx;
+    margin-left: 20rpx;
+    color: #454B86;
+}
+.write{
+    font-size: 25rpx;
+    margin-top: 4rpx;
+    margin-left: 40rpx;
+    color: #6369A6;
+}
+.time{
+    font-size: 25rpx;
+    margin-left: 20rpx;
+}
+.tu{
+    width: 47%;
+    height: 100%;
+    border-radius: 10rpx;
+    opacity: 0.7;
+}

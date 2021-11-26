@@ -1,0 +1,82 @@
+ <!-- 整个页面 -->
+  <page>
+  <!-- 未登录 -->
+    <view wx:if="{{!islogin}}" class="unlogined">
+      <!-- 用户显示区域 -->
+      <view  class="user1"> 
+        <input type="text" placeholder="请输入绑定手机号以登录" placeholder-class="placeholder" maxlength="11" bindinput="getsession" class="input"></input>
+        <view class="denglv" bindtap="getUserProfile"> 
+          <text class="text1">登 录</text> 
+        </view> 
+      </view>
+      <!-- 未登录时的收藏与记录 -->
+      <view class="collection">
+        <view class='abox'>
+          <view wx:for="{{tab}}"  wx:key="index" class='{{currentIndex==index?"tabTrue":""}}' bindtap='changeTab' data-aa='{{index}}'>
+            {{item}} 
+          </view>
+          <view class='b' style="left:{{left}}px"></view>
+        </view>
+        <!-- 收藏显示 -->
+        <scroll-view scroll-y="true" wx:if="{{isCollect}}" class="scroll-box">
+          <view class="inner" wx:for="{{list1}}" wx:key="index"> 
+            <view class="text">
+                <!-- 显示空白 -->
+            </view>
+            <image class="tu" src="{{item.src}}" mode="aspectFill"></image>
+          </view>
+        </scroll-view>
+        <!-- 浏览记录显示 -->
+        <scroll-view scroll-y="true" wx:else class="scroll-box">
+          <view class="inner" wx:for="{{list2}}" wx:key="index"> 
+            <view class="text">
+              <!-- 显示空白 -->
+            </view>
+            <image class="tu" src="{{item.src}}" mode="aspectFill"></image>
+          </view>
+        </scroll-view>
+      </view>
+    </view>
+    <!-- 登录后 -->
+    <view  wx:else class="logined">
+      <!-- 用户显示区域 -->
+      <view  class="user2">
+        <image  class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+        <view class="userinfo-nickname">
+            <text class="text4">{{userInfo.nickName}}</text>
+        </view>
+        <image class="logout" bindtap="noUserProfile" src="https://c1.im5i.com/2021/11/17/JxZ14.png"></image>
+      </view>
+      <!-- 登录后的收藏与记录 -->
+      <view class="collection">
+        <view class='abox'>
+          <view wx:for="{{tab}}"  wx:key="index" class='{{currentIndex==index?"tabTrue":""}}' bindtap='changeTab' data-aa='{{index}}'>
+            {{item}} 
+          </view>
+          <view class='b' style="left:{{left}}px"></view>
+        </view>
+        <!-- 收藏显示 -->
+        <scroll-view scroll-y="true" wx:if="{{isCollect}}" class="scroll-box">
+          <view class="inner" wx:for="{{list1}}" wx:key="index"> 
+            <view class="text">
+              <text class="title">{{item.title}}</text>
+              <text class="write">{{item.write}}</text>
+            </view>
+            <image class="tu" src="{{item.src}}" mode="aspectFill"></image>
+          </view>
+        </scroll-view>
+        <!-- 浏览记录显示 -->
+        <scroll-view scroll-y="true" wx:else class="scroll-box">
+          <view class="inner" wx:for="{{list2}}" wx:key="index"> 
+            <view class="text">
+              <text class="title">{{item.title}}</text>
+              <text class="write">{{item.write}}</text>
+              <text class="time">{{item.time}}</text>
+            </view>
+            <image class="tu" src="{{item.src}}" mode="aspectFill"></image>
+          </view>
+        </scroll-view>
+      </view>
+    </view>
+  </page>
+
