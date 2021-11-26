@@ -10,6 +10,7 @@
     position: fixed;
     background-size: 100% 100%;
     z-index: -1;
+    opacity: 0.5;
   }
 
 .content {
@@ -23,6 +24,7 @@
 .disk {
     width: 340rpx;
     height: 340rpx;
+    margin-top: 20rpx;
 }
 .disk image {
     width: 100%;
