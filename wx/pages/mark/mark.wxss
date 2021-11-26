@@ -68,7 +68,7 @@
 }
 
 #score{
-    margin-left: 175rpx;
+    margin-left: 230rpx;
     height: 150rpx;
     line-height: 150rpx;
     font-size: 120rpx;
