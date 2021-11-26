@@ -101,7 +101,7 @@ Page({
    */
   onLoad: function (options) {
     let that = this;
-    that.setArticleList();
+   // that.setArticleList();
     if (appData.articleList.length != 0) {
       that.setData({
         article: appData.articleList

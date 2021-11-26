@@ -23,44 +23,6 @@ Page({
       left:"",
       isCollect:true,
     },
-<<<<<<< HEAD
-    //获取播放列表
-    setMusicList: function() {
-      console.log("获取播放列表");
-      wx.request({
-        url: 'http://101.43.7.157:8000/alwaysRight/getRandomAudio',
-        data: {cnt: 5},
-        header: {'content-type':'application/json'},
-        method: 'POST',
-        dataType: 'json',
-        responseType: 'text',
-        success: (res) => {
-          console.log("request success!");
-          //res.data.randomWork
-          //console.log(res);
-          console.log(res.data.randomWork);
-          let work = res.data.randomWork;
-          appData.musicList = [];
-          for (let i = 0; i < 5; ++i) {
-            appData.musicList.push(
-              {
-                auth: work[i].author,
-                src: work[i].Content,
-                title: work[i].workName
-              }
-            );
-          }
-        },
-        fail: () => {
-          console.log("request failed!");
-        },
-        complete: () => {
-        }
-      });
-    },
-=======
-
->>>>>>> 987d49c4bc81757afd6baf2cdb3daade5af31e41
     onLoad() {
       this.changeline(e);
     },
@@ -78,13 +40,9 @@ Page({
           })
         }
       })
-<<<<<<< HEAD
-      that.setMusicList();
-=======
       // wx.request({
       //   url: '',
       // })
->>>>>>> 987d49c4bc81757afd6baf2cdb3daade5af31e41
     },
 
     noUserProfile(e) {

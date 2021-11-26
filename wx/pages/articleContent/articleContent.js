@@ -17,12 +17,13 @@ Page({
         let that = this 
         wx.request({
         method: 'POST',
-        url: 'http://101.43.7.157:8000/alwaysRight/logIn', 
+       // url: 'http://101.43.7.157:8000/alwaysRight/logIn', 
+        url: 'http://172.20.10.2:5000/alwaysRight/logIn', 
         header: {
             'content-type': 'application/json' // 默认值
         },
         data:{
-            Phone:'19859092005'
+            phone:'19859092005'
         },
         success: function (res) {
             console.log(res)
@@ -40,8 +41,10 @@ Page({
       setTimeout(1000);
     console.log("获取文章内容");
     wx.request({
-      url: 'http://101.43.7.157:8000/alwaysRight/getRandomText',
+      //url: 'http://101.43.7.157:8000/alwaysRight/getRandomText',
+      url: 'http://172.20.10.2:5000/alwaysRight/getRandomText',
       data: {workid: "10032"},
+      
       header: {'content-type':'application/json'},
       method: 'POST',
       dataType: 'json',
