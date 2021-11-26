@@ -3,7 +3,7 @@
 const recorderManager = wx.getRecorderManager();
 const innerAudioContext = wx.createInnerAudioContext();
 let audioPath='';
-
+let appData = getApp().globalData;
 Page({
 
     /**
@@ -96,7 +96,8 @@ Page({
     //播放声音
     play: function () {
         innerAudioContext.autoplay = true
-        innerAudioContext.src = this.tempFilePath,
+        // innerAudioContext.src = this.tempFilePath,
+        innerAudioContext.src = audioPath,
         innerAudioContext.onPlay(() => {
         console.log('开始播放')
         })
@@ -109,7 +110,7 @@ Page({
     uploadAudio:function(){
          console.log("Test_uploadAudio4Score");
          wx.uploadFile({
-            url: 'http://101.43.7.157:8000/alwaysRight/uploadAudio4Score',
+            url: 'http://127.0.0.1:5000/alwaysRight/uploadAudio4Score',
             filePath: audioPath,
             name: 'audio',
             header: {
@@ -119,6 +120,9 @@ Page({
             success: function (res) {
                 console.log(res);
                  var str = res.data;
+                console.log(str);
+                appData.score = str.score;
+                console.log(appData.score);
             },
             fail: function (res) {
                  console.log(res);

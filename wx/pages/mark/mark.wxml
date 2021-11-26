@@ -15,7 +15,7 @@
     <view id="markRes">
             <text id="tip" >您的得分为:</text>
 
-            <text id="score" >SSS</text>
+            <text id="score" >{{score}}</text>
           
           
        
