@@ -15,7 +15,8 @@
     <view id="markRes">
             <text id="tip" >您的得分为:</text>
 
-            <text id="score" >{{score}}</text>
+            <!-- <text id="score" >{{score}}</text> -->
+            <text id="score" >A</text>
           
           
        
