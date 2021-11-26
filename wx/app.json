@@ -1,16 +1,24 @@
 {
   "pages":[
+    "pages/speak/speak" ,
+    "pages/testInterface/testInterface",
+
+
     "pages/homepage/homepage",
     "pages/articleContent/articleContent",
     "pages/article/article",
     "pages/music/music",
     "pages/musicPlayer/musicPlayer",
+<<<<<<< HEAD
     "pages/explanation/explanation",
     "pages/speak/speak" ,
+=======
+   
+>>>>>>> 987d49c4bc81757afd6baf2cdb3daade5af31e41
     "pages/mark/mark" ,
     "pages/index/index",
     "pages/logs/logs",
-    "pages/testInterface/testInterface",
+    
     "pages/mine/mine"
   ],
   "window":{

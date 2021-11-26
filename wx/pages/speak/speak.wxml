@@ -6,17 +6,17 @@
     <view class='container'>
         <view id='circle'>
             <!-- <view id='circle_2'> -->
-                <view id="record">
-                </view>   
+                <view wx:if="{{isActive}}" id="record_start" bindtap="start"></view>   
+                <view wx:else id="record_end" bindtap="stop"></view>
             <!-- </view> -->
              
         </view>
     
     
         <view class="btnList">
-            <button id="audioPlay" style="opacity:0.8" >播放</button>
+            <button id="audioPlay" style="opacity:0.8" bindtap="play">播放</button>
     
-            <button id="save" style="opacity:0.8">
+            <button id="save" style="opacity:0.8" bindtap="uploadAudio">
                 <navigator  class="" target="" url="/pages/mark/mark" hover-class="navigator-hover" open-type="navigate"> 保存 </navigator>   
             </button>
     

@@ -52,7 +52,7 @@ page{
 
 } */
 
-#record{
+#record_start{
     margin-top: 75rpx;
     margin-left: 75rpx;
     /* margin-bottom: 200rpx; */
@@ -63,6 +63,16 @@ page{
     /* opacity: 1;
     position: absolute;
     z-index: 2; */
+}
+
+#record_end{
+    margin-top: 75rpx;
+    margin-left: 75rpx;
+    /* margin-bottom: 200rpx; */
+    width: 150rpx;
+    height: 150rpx;
+    background-image: url('https://img2020.cnblogs.com/blog/1925168/202111/1925168-20211126091745804-1621632961.png');
+    background-size: 100% 100%;
 }
 
 
