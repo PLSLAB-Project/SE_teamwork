@@ -3,19 +3,21 @@
   <!-- 未登录 -->
     <view wx:if="{{!islogin}}" class="unlogined">
       <!-- 用户显示区域 -->
-      <view   class="user1"> 
+      <view  class="user1"> 
         <view class="denglv" bindtap="getUserProfile"> 
           <text class="text1">登 录</text> 
         </view> 
       </view>
       <!-- 未登录时的收藏与记录 -->
-      <view class="collection2">
-        <view class="select">
-          <text class="text3" bindtap="collect"> 收藏 </text>
-          <text class="text3" bindtap="record"> 浏览记录 </text>
+      <view class="collection">
+        <view class='abox'>
+          <view wx:for="{{tab}}"  wx:key="{{index}}" class='{{currentIndex==index?"tabTrue":""}}' bindtap='changeTab' data-aa='{{index}}'>
+            {{item}} 
+          </view>
+          <view class='b' style="left:{{left}}px"></view>
         </view>
         <!-- 收藏显示 -->
-        <view wx:if="{{isCollect}}" class="collect-box">
+        <scroll-view scroll-y="true" wx:if="{{isCollect}}" class="scroll-box">
           <view class="inner"> 
             <view class="text">
                 <!-- 显示空白 -->
@@ -46,9 +48,9 @@
             </view>
             <image class="tu" src="https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/首页-矩形框图片1.png" mode="aspectFill"></image>
           </view>
-        </view>
+        </scroll-view>
         <!-- 浏览记录显示 -->
-        <view wx:else class="record-box">
+        <scroll-view scroll-y="true" wx:else class="scroll-box">
           <view class="inner"> 
             <view class="text">
               <!-- 显示空白 -->
@@ -76,7 +78,7 @@
             </view>
             <image class="tu" src="https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/首页-矩形框图片1.png" mode="aspectFill"></image>
           </view>
-        </view>
+        </scroll-view>
       </view>
     </view>
     <!-- 登录后 -->
@@ -90,13 +92,15 @@
         <image class="logout" bindtap="noUserProfile" src="https://c1.im5i.com/2021/11/17/JxZ14.png"></image>
       </view>
       <!-- 登录后的收藏与记录 -->
-      <view class="collection2">
-        <view class="select">
-          <text class="text3" bindtap="collect"> 收藏 </text>
-          <text class="text3" bindtap="record"> 浏览记录 </text>
+      <view class="collection">
+        <view class='abox'>
+          <view wx:for="{{tab}}"  wx:key="{{index}}" class='{{currentIndex==index?"tabTrue":""}}' bindtap='changeTab' data-aa='{{index}}'>
+            {{item}} 
+          </view>
+          <view class='b' style="left:{{left}}px"></view>
         </view>
         <!-- 收藏显示 -->
-        <view wx:if="{{isCollect}}" class="collect-box">
+        <scroll-view scroll-y="true" wx:if="{{isCollect}}" class="scroll-box">
           <view class="inner"> 
             <view class="text">
               <text class="title">{{title1}}</text>
@@ -132,9 +136,9 @@
           </view>
           <image class="tu" src="https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/首页-矩形框图片1.png" mode="aspectFill"></image>
           </view>
-        </view>
+        </scroll-view>
         <!-- 浏览记录显示 -->
-        <view wx:else class="record-box">
+        <scroll-view scroll-y="true" wx:else class="scroll-box">
           <view class="inner"> 
             <view class="text">
               <text class="title">{{title5}}</text>
@@ -167,7 +171,7 @@
           </view>
           <image class="tu" src="https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/首页-矩形框图片1.png" mode="aspectFill"></image>
           </view>
-        </view>
+        </scroll-view>
       </view>
     </view>
   </page>
