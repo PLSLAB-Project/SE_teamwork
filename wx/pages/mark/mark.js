@@ -6,11 +6,11 @@ Page({
      * 页面的初始数据
      */
     data: {
-        score:"S"
+        score:""
     },
     setScore: function () {
         let that = this;
-        console.log(appData.score);
+        console.log("mark界面"+appData.score);
         that.setData({
             score:appData.score
         })
