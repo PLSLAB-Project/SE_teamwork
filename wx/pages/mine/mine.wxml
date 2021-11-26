@@ -4,6 +4,7 @@
     <view wx:if="{{!islogin}}" class="unlogined">
       <!-- 用户显示区域 -->
       <view  class="user1"> 
+        <input type="text" placeholder="请输入绑定手机号以登录" placeholder-class="placeholder" maxlength="11" bindinput="getsession" class="input"></input>
         <view class="denglv" bindtap="getUserProfile"> 
           <text class="text1">登 录</text> 
         </view> 

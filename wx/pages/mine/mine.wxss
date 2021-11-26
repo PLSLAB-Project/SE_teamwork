@@ -18,17 +18,27 @@ page {
     background-image: url(https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/首页-中部背景.png);
     opacity: 0.9;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
+}
+.input{
+    height: 80rpx;
+    width: 500rpx;
+    margin-top: 30rpx;
+    background-color: white;
+    opacity: 0.5;
+}
+.placeholder{
+    font-size: 40rpx;
 }
 .denglv{
-    width: 50%;
+    width: 40%;
     height: 30%;
     background-color:greenyellow;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 80rpx;
-    margin-left: 200rpx;
+    margin-top: 40rpx;
     border-radius: 20rpx;
 }
 .text1{

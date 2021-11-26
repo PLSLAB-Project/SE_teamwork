@@ -1,5 +1,3 @@
-let appData = getApp().globalData;//全局数据
-
 Page({
     data: {
       title1:"闽南话的魅力",
@@ -16,6 +14,8 @@ Page({
       time2:"2021-11-19",
       time3:"2021-11-19",
       time4:"2021-11-19",
+
+      session:"",
       userInfo: {},
       islogin:false,
       tab: ["收藏记录","浏览历史"],
@@ -23,68 +23,48 @@ Page({
       left:"",
       isCollect:true,
     },
-<<<<<<< HEAD
-    //获取播放列表
-    setMusicList: function() {
-      console.log("获取播放列表");
-      wx.request({
-        url: 'http://101.43.7.157:8000/alwaysRight/getRandomAudio',
-        data: {cnt: 5},
-        header: {'content-type':'application/json'},
-        method: 'POST',
-        dataType: 'json',
-        responseType: 'text',
-        success: (res) => {
-          console.log("request success!");
-          //res.data.randomWork
-          //console.log(res);
-          console.log(res.data.randomWork);
-          let work = res.data.randomWork;
-          appData.musicList = [];
-          for (let i = 0; i < 5; ++i) {
-            appData.musicList.push(
-              {
-                auth: work[i].author,
-                src: work[i].Content,
-                title: work[i].workName
-              }
-            );
-          }
-        },
-        fail: () => {
-          console.log("request failed!");
-        },
-        complete: () => {
-        }
-      });
-    },
-=======
 
->>>>>>> 987d49c4bc81757afd6baf2cdb3daade5af31e41
     onLoad() {
-      this.changeline(e);
+      this.changeline();
+    },
+
+    getsession(res){
+      this.setData({
+        session:res.detail.value
+      })
+      console.log(this.data.session)
     },
 
     getUserProfile(e) {
-      let that = this;
+      console.log(this.data.session)
+      let self =this
+      console.log("Test_reg");
+        let that = this 
+        wx.request({
+        method: 'POST',
+        url: 'http://101.43.7.157:8000/alwaysRight/reg', 
+        header: {
+            'content-type': 'application/json' // 默认值
+        },
+        data: {
+            phone: self.data.session,//这里的phone参数是某用户的电话号码
+        },
+        success: function (res) {
+          console.log(self.data.session)
+        },
+        })
+
       // 推荐使用wx.getUserProfile获取用户信息，开发者每次通过该接口获取用户个人信息均需用户确认
       // 开发者妥善保管用户快速填写的头像昵称，避免重复弹窗
       wx.getUserProfile({
         desc: '用于完善会员资料', // 声明获取用户个人信息后的用途，后续会展示在弹窗中，请谨慎填写
         success: (res) => {
-          that.setData({
+          this.setData({
             userInfo: res.userInfo,
             islogin: true
           })
         }
       })
-<<<<<<< HEAD
-      that.setMusicList();
-=======
-      // wx.request({
-      //   url: '',
-      // })
->>>>>>> 987d49c4bc81757afd6baf2cdb3daade5af31e41
     },
 
     noUserProfile(e) {
@@ -108,7 +88,6 @@ Page({
         })
       };
       this.changeline(e);
-      // console.log('e.currentTarget.dataset.aa:'+e.currentTarget.dataset.aa);
      },
 
      changeline:function(){
