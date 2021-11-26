@@ -1,5 +1,7 @@
 {
   "pages":[
+    "pages/speak/speak" ,
+    "pages/testInterface/testInterface",
 
     "pages/homepage/homepage",
     "pages/explanation/explanation",
@@ -7,11 +9,11 @@
     "pages/articleContent/articleContent",
     "pages/music/music",
     "pages/musicPlayer/musicPlayer",
-    "pages/speak/speak" ,
+   
     "pages/mark/mark" ,
     "pages/index/index",
     "pages/logs/logs",
-    "pages/testInterface/testInterface",
+    
     "pages/mine/mine"
     
   ],
