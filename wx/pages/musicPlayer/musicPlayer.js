@@ -1,32 +1,52 @@
 // pages/musicPlayer/musicPlayer.js
-
+let appDate = getApp().globalData;
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    innerAudioContext:{}
+    innerAudioContext:Object
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
+  setToid: function() {
+    let that = this;
+    that.innerAudioContext = wx.createInnerAudioContext();
+    that.innerAudioContext.autoPlay = true;
+    that.innerAudioContext.src = appDate.musicList[appDate.musicid].src;
+    setTimeout(that.innerAudioContext.play(), 10);
+    
+    console.log(that.innerAudioContext);
+    console.log(appDate.musicList[appDate.musicid].src);
+  },
+  goPrev: function() {
+    this.innerAudioContext.destroy();
+    appDate.musicid--;
+    if (appDate.musicid < 0)
+      appDate.musicid += 5;
+    this.setToid();
+  },
+  goNext: function() {
+    this.innerAudioContext.destroy();
+    appDate.musicid++;
+    if (appDate.musicid >= 5)
+      appDate.musicid = 0;
+    this.setToid();
+  },
   pause: function() {
     let innerAudioContext = this.innerAudioContext;
-    console.log("AAAA");
-    console.log(innerAudioContext);
     if (innerAudioContext.paused) {
       innerAudioContext.play();
     }
     else {
       innerAudioContext.pause();
     }
-},
+  },
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  
   onLoad: function (options) {
-    this.innerAudioContext = wx.createInnerAudioContext();
-    this.innerAudioContext.src = 'http://music.163.com/song/media/outer/url?id=1869929814.mp3';
-
+    
   },
 
   /**
@@ -40,14 +60,17 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    this.setToid();
+    this.innerAudioContext.onError((res)=>{
+      console.log(res.errMsg);
+    })
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-
+    
   },
 
   /**

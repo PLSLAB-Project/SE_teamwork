@@ -1,37 +1,47 @@
 // pages/article/article.js
+let appData = getApp().globalData;//全局数据
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    article: [{
+    article:[],
+    tmpArticle: [{
         title: "闽南话的魅力",
-        auth: "陈建新"
+        auth: "陈建新",
+        articleId: 1
       },
       {
         title: "学听闽南话",
-        auth: "黄岑"
+        auth: "黄岑",
+        articleId: 2
       },
       {
         title: "闽南语抗疫热词TOP9",
-        auth: "小南"
+        auth: "小南",
+        articleId: 3
       },
       {
         title: "一片冰心在玉壶",
-        auth: "世界华声音"
+        auth: "世界华声音",
+        articleId: 4
       },
       {
         title: "澎湃海丝情",
-        auth: "晋江电视台"
+        auth: "晋江电视台",
+        articleId: 5
       },
       {
         title: "闽南听语",
-        auth: "文学顾事"
+        auth: "文学顾事",
+        articleId: 6
       },
       {
         title: "闽南三江知青红",
-        auth: "闽南旅游"
+        auth: "闽南旅游",
+        articleId: 7
       }
     ],
     renderImgUrl: [
@@ -41,6 +51,7 @@ Page({
       "https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/首页-矩形框图片4.png"
     ]
   },
+  //访问文章内容
   toContent: function() {
     wx.navigateTo({
       url: '../articleContent/articleContent',
@@ -51,10 +62,60 @@ Page({
       url: '../music/music',
     })
   },
+
+  setArticleList: function() {
+    console.log("获取文章列表");
+    wx.request({
+      url: 'http://101.43.7.157:8000/alwaysRight/getRandomTextId',
+      data: {cnt: 8},
+      header: {'content-type':'application/json'},
+      method: 'POST',
+      dataType: 'json',
+      responseType: 'text',
+      success: (res) => {
+        console.log("request success!");
+        //res.data.randomWork
+        //console.log(res);
+        console.log(res.data.randomWork);
+        let work = res.data.randomWork;
+        appData.articleList = [];
+        // for (let i = 0; i < 5; ++i) {
+        //   appData.articleList.push(
+        //     {
+        //       auth: work[i].author,
+        //       src: work[i].Content,
+        //       title: work[i].workName
+        //     }
+        //   );
+        // }
+      },
+      fail: () => {
+        console.log("request failed!");
+      },
+      complete: () => {
+      }
+    });
+  },
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {},
+  onLoad: function (options) {
+    let that = this;
+    that.setArticleList();
+    if (appData.articleList.length != 0) {
+      that.setData({
+        article: appData.articleList
+      });
+    }
+    else {
+      that.setData(
+        {
+          article: that.data.tmpArticle
+        }
+      )
+      appData.articleList = that.data.article
+    }
+  },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
@@ -67,7 +128,20 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    let that = this;
+    if (appData.articleList.length != 0) {
+      that.setData({
+        article: appData.articleList
+      });
+    }
+    else {
+      that.setData(
+        {
+          article: that.data.tmpArticle
+        }
+      )
+    }
+    appData.articleList = that.data.article
   },
 
   /**

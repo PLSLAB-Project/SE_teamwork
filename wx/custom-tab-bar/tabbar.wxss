@@ -5,7 +5,7 @@
   height: 95rpx;
   position: fixed;
   bottom: 0;
-  background: #F6f6f7;
+  background: #fff;
   display: flex;
   z-index: 999;
 

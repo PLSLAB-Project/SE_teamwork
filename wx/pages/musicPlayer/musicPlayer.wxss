@@ -19,16 +19,17 @@
     align-items: center;
     flex-direction: column;
     width: 550rpx;
-    height: 1000rpx;
+    height: 1100rpx;
 }
 .disk {
     width: 340rpx;
     height: 340rpx;
-    margin-top: 20rpx;
+    margin-top: 60rpx;
 }
 .disk image {
     width: 100%;
     height: 100%;
+    z-index: 10;
 }
 .collect {
     width: 550rpx;
@@ -40,12 +41,33 @@
     color: white;
     border-radius: 18rpx;
 }
+.playBox {
+    position: relative;
+}
+.doubleLine {
+    position:absolute;
+    background: #434985;
+    margin-top: -44rpx;
+    margin-left: -44rpx;
+    width: 100rpx;
+    height: 100rpx;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.doubleLine image {
+    width: 30%;
+}
 .play {
     display: flex;
     justify-content: space-around;
     align-items: center;
     height: 360rpx;
     width: 550rpx;
+    border-radius: 50rpx;
+    background: url("https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/背景.png") no-repeat left bottom;
+    background-size: 100%;
 }
 
 .pre {

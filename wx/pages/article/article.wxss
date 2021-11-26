@@ -52,7 +52,6 @@
 
 .articleList {
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
   margin-top: 52rpx;
@@ -66,7 +65,7 @@
 
 .content {
   display: flex;
-  margin-top: 46rpx;
+  margin-top: 15rpx;
   width: 95%;
   height: 160rpx;
   border-radius: 20rpx;
@@ -78,22 +77,21 @@
 .articleList .content .leftContent {
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
 
 .articleList .content .title {
   width: 300rpx;
   height: 40rpx;
-  margin-left: 40rpx;
-  margin-top: 20rpx;
+  margin-left: 30rpx;
+  margin-top: 30rpx;
   font-size: 30rpx;
   text-align: left;
   color: #454B86;
 }
 
 .articleList .content .author {
-  margin-left: 40rpx;
-  margin-top: 6rpx;
+  margin-left: 30rpx;
+  margin-top: 15rpx;
   width: 300rpx;
   font-size: 26rpx;
   text-align: left;
@@ -102,7 +100,7 @@
 }
 
 .articleList .content .img {
-  height: 95%;
+  height: 100%;
   width: 40%;
   border-radius: 20rpx;
 }

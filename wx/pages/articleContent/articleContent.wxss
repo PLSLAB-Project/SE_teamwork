@@ -1,1 +1,19 @@
 /* pages/articleContent/articleContent.wxss */
+.title {
+    width: 100%;
+    height: 100rpx;
+    text-align: center;
+    line-height: 100rpx;
+}
+.auth {
+    width: 100%;
+    height: 100rpx;
+    text-align: center;
+    line-height: 100rpx;
+}
+.line {
+    text-indent: 2em;
+    text-align: justify;
+    margin-top: 2em;
+    line-height: 2em;
+}

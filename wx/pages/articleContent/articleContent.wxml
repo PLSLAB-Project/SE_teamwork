@@ -1,5 +1,17 @@
 <!--pages/articleContent/articleContent.wxml-->
-<view>
-    文章
+<view class="page">
+    <view class="title">{{title}}</view>
+    <view class="auth">{{auth}}</view>
+    <view class="line" wx:for="{{content}}}" wx:for-index="idx" wx:for-item="item" wx:key="item">
+        {{content[idx]}}
+    </view>       
 </view>
+
+<view bind:tap="test" style="height: 300rpx; width: 300rpx; background-color: black;">
+    
+</view>
+<view bind:tap="get" style="height: 300rpx; width: 300rpx; background-color: blue;">
+    
+</view>
+  
   

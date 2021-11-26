@@ -14,6 +14,11 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    musicList: [], // 音乐列表
+    articleList: [], //推文列表
+    articleId: Number, //当前推文的id
+    musicid: Number,
+    session: '19859092005' //手机号
   }
 })

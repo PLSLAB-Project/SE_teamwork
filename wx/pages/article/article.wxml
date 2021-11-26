@@ -19,7 +19,7 @@
 
 <!--文章列表-->
 <view class="articleList">
-  <view class="content" wx:for="{{article}}" wx:for-index="idx" wx:for-item="item" wx:key="item" bind:tap="toContent">
+  <view class="content" wx:for="{{article}}" wx:for-index="idx" wx:for-item="item" wx:key="item" bind:tap="toContent" data-idx="{{idx}}">
     <view class="leftContent">
       <view class="title">{{item.title}}</view>
       <view class="author">{{item.auth}}</view>

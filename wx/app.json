@@ -1,17 +1,17 @@
 {
   "pages":[
     "pages/homepage/homepage",
-    "pages/explanation/explanation",
-    "pages/article/article",
     "pages/articleContent/articleContent",
+    "pages/article/article",
     "pages/music/music",
+    "pages/musicPlayer/musicPlayer",
+    "pages/explanation/explanation",
     "pages/speak/speak" ,
     "pages/mark/mark" ,
     "pages/index/index",
     "pages/logs/logs",
     "pages/testInterface/testInterface",
     "pages/mine/mine"
-    
   ],
   "window":{
     "backgroundTextStyle":"light",

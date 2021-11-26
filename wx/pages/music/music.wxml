@@ -17,7 +17,7 @@
     
   <!--歌曲列表-->
   <view class="musicList">
-    <view class="content" wx:for="{{music}}" wx:for-index="idx" wx:for-item="item" wx:key="item" bind:tap="toPlay">
+    <view class="content" wx:for="{{music}}" wx:for-index="idx" wx:for-item="item" wx:key="item" bind:tap="toPlay" data-idx="{{idx}}">
       <view class="leftContent">
         <view class="title">{{item.title}}</view>
         <view class="author">{{item.auth}}</view>
