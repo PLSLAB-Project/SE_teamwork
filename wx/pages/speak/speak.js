@@ -3,7 +3,7 @@
 const recorderManager = wx.getRecorderManager();
 const innerAudioContext = wx.createInnerAudioContext();
 let audioPath='';
-
+let appData = getApp().globalData;
 Page({
 
     /**
@@ -120,6 +120,9 @@ Page({
             success: function (res) {
                 console.log(res);
                  var str = res.data;
+                console.log(str);
+                appData.score = str.score;
+                console.log(appData.score);
             },
             fail: function (res) {
                  console.log(res);
