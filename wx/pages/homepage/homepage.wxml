@@ -23,49 +23,14 @@
         <image class="picture1" src="https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/首页-中部背景.png" mode="aspectFill"></image>
         <image class="picture2" src="https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/首页-小鹤.png"></image>
         <!-- 文章列表 -->
-        <scroll-view scroll-y="true" class="article_container">
-                <view class="article">
+        <scroll-view scroll-y="true" class="article_container" >
+                <view class="article" wx:for="{{list}}" wx:key="index">
                     <view class="text">
-                        <text class="title">{{title1}}</text>
-                        <text class="write">{{write1}}</text>
+                        <text class="title">{{item.title}}</text>
+                        <text class="write">{{item.write}}</text>
                     </view>
-                    <image class="tu" src="https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/首页-矩形框图片1.png" mode="center"></image>
-                </view>
-                <view class="article">
-                    <view class="text">
-                        <text class="title">{{title2}}</text>
-                        <text class="write">{{write2}}</text>
-                    </view>
-                    <image class="tu" src="https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/首页-矩形框图片2.png" mode="center"></image>
-                </view>
-                <view class="article">
-                    <view class="text">
-                        <text class="title">{{title3}}</text>
-                        <text class="write">{{write3}}</text>
-                    </view>
-                    <image class="tu" src="https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/首页-矩形框图片3.png" mode="center"></image>
-                </view>
-                <view class="article">
-                    <view class="text">
-                        <text class="title">{{title4}}</text>
-                        <text class="write">{{write4}}</text>
-                    </view>
-                    <image class="tu" src="https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/首页-矩形框图片4.png" mode="center"></image>
-                </view>  
-                <view class="article">
-                    <view class="text">
-                        <text class="title">{{title4}}</text>
-                        <text class="write">{{write4}}</text>
-                    </view>
-                    <image class="tu" src="https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/首页-矩形框图片4.png" mode="center"></image>
-                </view>
-                <view class="article">
-                    <view class="text">
-                        <text class="title">{{title4}}</text>
-                        <text class="write">{{write4}}</text>
-                    </view>
-                    <image class="tu" src="https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/首页-矩形框图片4.png" mode="center"></image>
-                </view>  
+                    <image class="tu" src="{{item.src}}" mode="center"></image>
+                </view>       
         </scroll-view>
     </view>
 </page>

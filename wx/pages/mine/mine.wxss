@@ -38,6 +38,7 @@ page {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     margin-top: 40rpx;
     border-radius: 20rpx;
 }
@@ -101,7 +102,7 @@ page {
     width:190rpx;
     position: absolute;
     bottom: 0;
-    transition: all .2s linear;
+    transition: all .11s linear;
 }
 .text3{
     font-size: 50rpx;
@@ -118,7 +119,7 @@ page {
     flex-direction: row;
     width:90%; 
     margin-left: 5%;
-    height: 170rpx;
+    height: 190rpx;
     margin-bottom: 15rpx;
     border-radius: 30rpx;
     box-shadow:0rpx 1rpx  1rpx 2rpx rgb(224, 224, 219);
@@ -135,13 +136,13 @@ page {
     color: #454B86;
 }
 .write{
-    font-size: 30rpx;
-    margin-top: 10rpx;
+    font-size: 25rpx;
+    margin-top: 4rpx;
     margin-left: 40rpx;
     color: #6369A6;
 }
 .time{
-    font-size: 30rpx;
+    font-size: 25rpx;
     margin-left: 20rpx;
 }
 .tu{
