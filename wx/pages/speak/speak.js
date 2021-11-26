@@ -96,7 +96,8 @@ Page({
     //播放声音
     play: function () {
         innerAudioContext.autoplay = true
-        innerAudioContext.src = this.tempFilePath,
+        // innerAudioContext.src = this.tempFilePath,
+        innerAudioContext.src = audioPath,
         innerAudioContext.onPlay(() => {
         console.log('开始播放')
         })
