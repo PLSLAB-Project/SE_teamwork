@@ -66,8 +66,8 @@ Page({
   setArticleList: function() {
     console.log("获取文章列表");
     wx.request({
-      url: 'http://101.43.7.157:8000/alwaysRight/getRandomTextId',
-      data: {cnt: 8},
+      url: 'http://127.0.0.1:5000/alwaysRight/getRandomTextId',
+      data: {cnt: 5},
       header: {'content-type':'application/json'},
       method: 'POST',
       dataType: 'json',
@@ -79,15 +79,15 @@ Page({
         console.log(res.data.randomWork);
         let work = res.data.randomWork;
         appData.articleList = [];
-        // for (let i = 0; i < 5; ++i) {
-        //   appData.articleList.push(
-        //     {
-        //       auth: work[i].author,
-        //       src: work[i].Content,
-        //       title: work[i].workName
-        //     }
-        //   );
-        // }
+         for (let i = 0; i < 5; ++i) {
+           appData.articleList.push(
+             {
+               auth: work[i].author,
+               src: work[i].Content,
+               title: work[i].workName
+             }
+           );
+         }
       },
       fail: () => {
         console.log("request failed!");
@@ -101,7 +101,7 @@ Page({
    */
   onLoad: function (options) {
     let that = this;
-   // that.setArticleList();
+    that.setArticleList();
     if (appData.articleList.length != 0) {
       that.setData({
         article: appData.articleList
@@ -140,8 +140,9 @@ Page({
           article: that.data.tmpArticle
         }
       )
+      appData.articleList = that.data.article
     }
-    appData.articleList = that.data.article
+    console.log(that.data.tmpArticle);
   },
 
   /**

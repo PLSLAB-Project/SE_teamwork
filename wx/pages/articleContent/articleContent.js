@@ -1,4 +1,6 @@
 // pages/articleContent/articleContent.js
+let appData =  getApp().globalData;
+ 
 Page({
 
   /**
@@ -12,38 +14,12 @@ Page({
 
   },
   get: function () {
-    //登录
-    console.log("Test_logIn");
-        let that = this 
-        wx.request({
-        method: 'POST',
-       // url: 'http://101.43.7.157:8000/alwaysRight/logIn', 
-        url: 'http://172.20.10.2:5000/alwaysRight/logIn', 
-        header: {
-            'content-type': 'application/json' // 默认值
-        },
-        data:{
-            phone:'19859092005'
-        },
-        success: function (res) {
-            console.log(res)
-
-        },
-        fail: function () {
-            console.log("fail")
-        },
-        complete: function () {
-            that.setData({
-            isshow:false
-            })
-        } 
-        })
-      setTimeout(1000);
     console.log("获取文章内容");
+    let val = null;
     wx.request({
       //url: 'http://101.43.7.157:8000/alwaysRight/getRandomText',
-      url: 'http://172.20.10.2:5000/alwaysRight/getRandomText',
-      data: {workid: "10032"},
+      url: 'http://127.0.0.1:5000/alwaysRight/getRandomText',
+      data: {workid: "10032", phone: appData.session},
       
       header: {'content-type':'application/json'},
       method: 'POST',
@@ -54,6 +30,9 @@ Page({
         //res.data.randomWork
         //console.log(res);
         console.log(res.data);
+        val = res.data.randomWork[0].workContent;
+        console.log(val);
+        val = val.split('\n');
       },
       fail: () => {
         console.log("request failed!");

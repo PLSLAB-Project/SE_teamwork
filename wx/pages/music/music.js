@@ -65,7 +65,7 @@ Page({
    setMusicList: function() {
     console.log("获取播放列表");
     wx.request({
-      url: 'http://101.43.7.157:8000/alwaysRight/getRandomAudio',
+      url: 'http://127.0.0.1:5000/alwaysRight/getRandomAudio',
       data: {cnt: 5},
       header: {'content-type':'application/json'},
       method: 'POST',
