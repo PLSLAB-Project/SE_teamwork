@@ -34,6 +34,8 @@ Page({
     //开始录音的时候
     start: function () {
 
+        app.globalData.score="nothing";
+
         value=0;
         this.progressView2.drawProgressBar(value, 100);
 
@@ -122,7 +124,7 @@ Page({
 
 
         ////新增
-       // this.uploadAudio();
+       this.uploadAudio();
     },
 
     //播放声音
@@ -157,14 +159,19 @@ Page({
             success: function (res) {
                 console.log(res);
                  let str = res.data;
+                let str2=JSON.parse(res.data);
                 console.log("调接口获取到的"+str);
+                console.log("调接口获取到的json"+str2);
+                console.log("str里的score"+str.score);
+                console.log("str2里的score"+str2.score);
                 //appData.score = str.score;
                 
-                if(typeof(str.score)== "undefined"){
+                if(typeof(str2.score)== "undefined"){
                     console.log("接口还未返回数据");
                 }
                 else{
-                    console.log("str里的score"+str.score);
+                    console.log("str里的score"+str2.score);
+                    app.globalData.score=str2.score;
                     console.log("appData里"+app.globalData.score);
                 }
                 
