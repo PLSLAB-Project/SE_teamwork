@@ -24,12 +24,12 @@
         <image class="picture2" src="https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/首页-小鹤.png"></image>
         <!-- 文章列表 -->
         <scroll-view scroll-y="true" class="article_container" >
-                <view class="article" wx:for="{{list}}" wx:key="index">
+                <view class="article" wx:for="{{list}}" wx:key="index" wx:for-index="idx" data-idx="{{idx}}" bind:tap="toContent">
                     <view class="text">
-                        <text class="title">{{item.title}}</text>
-                        <text class="write">{{item.write}}</text>
+                        <text class="title">{{item.name}}</text>
+                        <text class="write">{{item.author}}</text>
                     </view>
-                    <image class="tu" src="{{item.src}}" mode="center"></image>
+                    <image class="tu" src="{{renderImgUrl[idx%4]}}" mode="center"></image>
                 </view>       
         </scroll-view>
     </view>

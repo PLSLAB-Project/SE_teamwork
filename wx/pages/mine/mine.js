@@ -87,7 +87,6 @@ Page({
     },
 
     getUserProfile(e) {
-
       console.log(this.data.session)
         let that = this 
         wx.request({
@@ -116,13 +115,11 @@ Page({
         }
       })
     },
-
     noUserProfile(e) {
           this.setData({
             islogin: false
           })
     },
-    
     changeTab:function(e){
       this.setData({
        currentIndex: e.currentTarget.dataset.aa
