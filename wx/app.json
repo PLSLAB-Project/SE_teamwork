@@ -5,6 +5,7 @@
     "pages/speak/speak" ,
     "pages/testInterface/testInterface",
     "pages/articleContent/articleContent",
+    "pages/explanation/explanation",
     "pages/music/music",
     "pages/musicPlayer/musicPlayer",
     "pages/mark/mark" ,
