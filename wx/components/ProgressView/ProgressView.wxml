@@ -4,5 +4,5 @@
     <canvas canvas-id="circleBar" style="width:{{width}}rpx;height:{{height}}rpx;">
       
     </canvas>
-    <!-- <text hidden="{{!showText}}" style="font-size:{{textSize}}rpx;color:{{textColor}}">{{percentage}}%</text> -->
+    <text hidden="{{!showText}}" style="font-size:{{textSize}}rpx;color:{{textColor}}">{{percentage}}%</text>
   </view>
