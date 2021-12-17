@@ -7,9 +7,12 @@
     <!-- 点击开始录音转换 -->
     <view class="box1" >
         <text class="text1">点击麦克风开始转换</text>
-        <image class="mai" src="https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/首页-话筒.png" mode="aspectFit" ></image>
+        <image class="mai" src="https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/首页-话筒.png" mode="aspectFit"  bindtap="explain"></image>
     </view>
     <view class="explain">
         <text class="text2" >释 义</text>
+        <text  wx:if="{{number==1}}" class="explanation">{{text1}}</text>
+        <text  wx:if="{{number==2}}" class="explanation">{{text2}}</text>
+        <text  wx:if="{{number==3}}" class="explanation">{{text3}}</text>
     </view>
 </page>
