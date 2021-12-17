@@ -17,6 +17,7 @@
             <button id="audioPlay" style="opacity:0.8" bindtap="play">播放</button>
     
             <button id="save" style="opacity:0.8" bindtap="uploadAudio">
+            <!-- <button id="save" style="opacity:0.8" > -->
                 <!-- <navigator  class="" target="" url="/pages/mark/mark" hover-class="navigator-hover" open-type="navigate"> 评分 </navigator>    -->
                 评分
             </button>
