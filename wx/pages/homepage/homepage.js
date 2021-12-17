@@ -1,38 +1,11 @@
 // pages/homepage/homepage.js
+
+let appData = getApp().globalData;//全局数据
+
 Page({
 
     data: {
-      list:[
-      // {title:'闽南话的魅力',
-      //   author:'陈建新',
-
-      // },
-      // {
-      //   title:'学听闽南话',
-      //   author:'黄芩',
-
-      // },
-      // {
-      //   title:'闽南语抗疫热词TOP9',
-      //   author:'小南',
-
-      // },
-      // {
-      //   title:'听阿姆讲童谣',
-      //   author:'小北',
-
-      // },
-      // {
-      //   title:'听阿姆讲童谣',
-      //   author:'小北',
-
-      // },
-      // {
-      //   title:'学听闽南话',
-      //   author:'黄芩',
-
-      // }
-      ],
+      list:[],
       renderImgUrl:[
         'https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/首页-矩形框图片1.png',
         'https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/首页-矩形框图片2.png',
@@ -50,12 +23,11 @@ Page({
         url: '../articleContent/articleContent',
       })
     },
+
     /**
      * 生命周期函数--监听页面加载
      */
-    onLoad: function (options) {
-      let that = this 
-      
+    onLoad: function (options) { 
     },
 
     /**

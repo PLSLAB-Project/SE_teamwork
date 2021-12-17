@@ -29,6 +29,8 @@ Page({
       write:'黄芩',
       src:'https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/首页-矩形框图片2.png'
     }],
+
+    
       list2:[{title:'闽南话的魅力',
       write:'陈建新',
       src:'https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/首页-矩形框图片1.png',
