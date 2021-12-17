@@ -4,6 +4,12 @@ const recorderManager = wx.getRecorderManager();
 const innerAudioContext = wx.createInnerAudioContext();
 let audioPath='';
 let appData = getApp().globalData;
+
+
+//新增
+var value=0;
+let myTimer;
+
 Page({
 
     /**
@@ -18,6 +24,10 @@ Page({
      */
     onLoad: function (options) {
 
+        this.progressView2 = this.selectComponent("#progressView2");
+ 
+        //this.progressView.showCanvasRing(value, 100); //绘制环形进度
+        this.progressView2.drawProgressBar(value, 60); //绘制环形进度
     },
 
     //开始录音的时候
@@ -27,7 +37,7 @@ Page({
             isActive:false
         })
         const options = {
-        duration: 10000,//指定录音的时长，单位 ms
+        duration: 61000,//指定录音的时长，单位 ms
         sampleRate: 16000,//采样率
         numberOfChannels: 1,//录音通道数
         encodeBitRate: 96000,//编码码率
@@ -39,6 +49,18 @@ Page({
         recorderManager.onStart(() => {
         console.log('recorder start')
         });
+
+        let self=this;
+        myTimer = setInterval(function(){
+            value++;
+            self.progressView2.drawProgressBar(value, 60);
+            console.log(value);
+            if(value>60){
+                console.log("超时停止");
+                self.stop();
+            }
+        },1000)
+
         //错误回调
         recorderManager.onError((res) => {
         console.log(res);
@@ -46,6 +68,8 @@ Page({
     },
      //停止录音
      stop: function () {
+
+        clearInterval(myTimer);
 
         this.setData({
             isActive:true
@@ -107,6 +131,11 @@ Page({
         })
     },
 
+    respeak: function(){
+        value=0;
+        this.progressView2.drawProgressBar(value, 100);
+    },
+
     uploadAudio:function(){
          console.log("Test_uploadAudio4Score");
          wx.uploadFile({
@@ -142,6 +171,10 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function () {
+        if(value>60){
+            console.log("超时停止");
+            this.stop();
+        }
 
     },
 
