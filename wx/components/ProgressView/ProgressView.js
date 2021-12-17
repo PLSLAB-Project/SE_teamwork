@@ -22,11 +22,12 @@ Component({
         //线条颜色 默认"#E3AF6A"
         lineColor: {
           type: String,
-          value: "#434985"
+          value: "#464B8E"
         },
         //进度条底色
         bottomColor: {
           type: String,
+        //   value: "#FFF9F1"
           value: "#FFF9F1"
         },
         //当前的值 
@@ -42,7 +43,7 @@ Component({
         //是否显示中间进度值文字
         showText: {
           type: Boolean,
-          value: true
+          value: false
         },
         //中间字体大小，单位rpx
         textSize: {
