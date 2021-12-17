@@ -1,0 +1,11 @@
+/* components/ProgressView/ProgressView.wxss */
+.canvasView{
+    /* margin-top: 100rpx; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 118rpx;
+    /* position: relative; */
+    /* position: absolute; */
+    /* z-index: 99; */
+  }
