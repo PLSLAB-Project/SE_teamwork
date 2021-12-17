@@ -77,6 +77,8 @@ Page({
 
         clearInterval(myTimer);
 
+        let self=this;
+
         this.setData({
             isActive:true
         })
@@ -86,6 +88,12 @@ Page({
             console.log('停止录音', res.tempFilePath)
             const { tempFilePath } = res
             audioPath=res.tempFilePath;
+            // while(app.globalData.score=="nothing"){
+            //     console.log("hhhh");
+            //     self.uploadAudio();
+            // }
+            self.uploadAudio();
+           
 
         //     if((typeof res.tempFilePath==='string' )){
         //         console.log("yes");
@@ -124,7 +132,7 @@ Page({
 
 
         ////新增
-       this.uploadAudio();
+    //    this.uploadAudio();
     },
 
     //播放声音
