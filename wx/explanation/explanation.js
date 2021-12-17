@@ -1,26 +1,31 @@
-// pages/mark/mark.js
-let appData = getApp().globalData;
+// pages/explanation/explanation.js
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-        score:""
+        number:0,
+        text1:'汝昼食何',
+        text2:'壹二三肆伍六七八九十',
+        text3:'11111111111111',
     },
-    setScore: function () {
-        let that = this;
-        console.log("mark界面"+appData.score);
-        that.setData({
-            score:appData.score
-        })
-    },
+
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-        let that = this;
-        that.setScore();
+
+    },
+
+    explain(){
+        let that = this
+        setTimeout(function(){
+            let cnt=that.data.number+1
+            that.setData({
+                number:cnt
+            })
+        },5000)
     },
 
     /**
@@ -34,8 +39,7 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function () {
-        let that = this;
-        that.setScore();
+
     },
 
     /**

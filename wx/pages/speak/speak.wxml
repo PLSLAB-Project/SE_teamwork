@@ -1,6 +1,6 @@
 <!-- <page > -->
     <view class='bg'>
-    
+        <progressView id="progressView2" canvasWidth="380" radian="{{4/4}}"/>
     </view>
       
     <view class='container'>
@@ -17,10 +17,12 @@
             <button id="audioPlay" style="opacity:0.8" bindtap="play">播放</button>
     
             <button id="save" style="opacity:0.8" bindtap="uploadAudio">
-                <navigator  class="" target="" url="/pages/mark/mark" hover-class="navigator-hover" open-type="navigate"> 保存 </navigator>   
+            <!-- <button id="save" style="opacity:0.8" > -->
+                <!-- <navigator  class="" target="" url="/pages/mark/mark" hover-class="navigator-hover" open-type="navigate"> 评分 </navigator>    -->
+                评分
             </button>
     
-            <button id="rerecord" style="opacity:0.8">重录</button>
+            <button id="rerecord" style="opacity:0.8" bindtap="respeak">重录</button>
             <!-- <button bindtap="InterfaceTest1">测试接口</button> -->
         </view>
           

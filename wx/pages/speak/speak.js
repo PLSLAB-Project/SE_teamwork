@@ -3,7 +3,14 @@
 const recorderManager = wx.getRecorderManager();
 const innerAudioContext = wx.createInnerAudioContext();
 let audioPath='';
-let appData = getApp().globalData;
+let app = getApp();
+
+
+//新增
+var value=0;
+let myTimer;
+let mygrade=-1;
+
 Page({
 
     /**
@@ -18,16 +25,25 @@ Page({
      */
     onLoad: function (options) {
 
+        this.progressView2 = this.selectComponent("#progressView2");
+ 
+        //this.progressView.showCanvasRing(value, 100); //绘制环形进度
+        this.progressView2.drawProgressBar(value, 60); //绘制环形进度
     },
 
     //开始录音的时候
     start: function () {
 
+        app.globalData.score="nothing";
+
+        value=0;
+        this.progressView2.drawProgressBar(value, 100);
+
         this.setData({
             isActive:false
         })
         const options = {
-        duration: 10000,//指定录音的时长，单位 ms
+        duration: 61000,//指定录音的时长，单位 ms
         sampleRate: 16000,//采样率
         numberOfChannels: 1,//录音通道数
         encodeBitRate: 96000,//编码码率
@@ -39,6 +55,18 @@ Page({
         recorderManager.onStart(() => {
         console.log('recorder start')
         });
+
+        let self=this;
+        myTimer = setInterval(function(){
+            value++;
+            self.progressView2.drawProgressBar(value, 60);
+            console.log(value);
+            if(value>60){
+                console.log("超时停止");
+                self.stop();
+            }
+        },1000)
+
         //错误回调
         recorderManager.onError((res) => {
         console.log(res);
@@ -46,6 +74,10 @@ Page({
     },
      //停止录音
      stop: function () {
+
+        clearInterval(myTimer);
+
+        let self=this;
 
         this.setData({
             isActive:true
@@ -56,6 +88,12 @@ Page({
             console.log('停止录音', res.tempFilePath)
             const { tempFilePath } = res
             audioPath=res.tempFilePath;
+            // while(app.globalData.score=="nothing"){
+            //     console.log("hhhh");
+            //     self.uploadAudio();
+            // }
+            self.uploadAudio();
+           
 
         //     if((typeof res.tempFilePath==='string' )){
         //         console.log("yes");
@@ -91,6 +129,10 @@ Page({
         //         mypath: ''+res.tempFilePath
         //     })
         })
+
+
+        ////新增
+    //    this.uploadAudio();
     },
 
     //播放声音
@@ -107,6 +149,11 @@ Page({
         })
     },
 
+    respeak: function(){
+        value=0;
+        this.progressView2.drawProgressBar(value, 100);
+    },
+
     uploadAudio:function(){
          console.log("Test_uploadAudio4Score");
          wx.uploadFile({
@@ -119,16 +166,36 @@ Page({
             },
             success: function (res) {
                 console.log(res);
-                 var str = res.data;
-                console.log(str);
-                appData.score = str.score;
-                console.log(appData.score);
+                 let str = res.data;
+                let str2=JSON.parse(res.data);
+                console.log("调接口获取到的"+str);
+                console.log("调接口获取到的json"+str2);
+                console.log("str里的score"+str.score);
+                console.log("str2里的score"+str2.score);
+                //appData.score = str.score;
+                
+                if(typeof(str2.score)== "undefined"){
+                    console.log("接口还未返回数据");
+                }
+                else{
+                    console.log("str里的score"+str2.score);
+                    app.globalData.score=str2.score;
+                    console.log("appData里"+app.globalData.score);
+                }
+                
             },
             fail: function (res) {
                  console.log(res);
             }
             
         });
+
+        if(app.globalData.score!="nothing"){
+            wx.navigateTo({
+                url: '../mark/mark',
+            })
+        }
+       
 
     },
     /**
@@ -142,6 +209,10 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function () {
+        if(value>60){
+            console.log("超时停止");
+            this.stop();
+        }
 
     },
 

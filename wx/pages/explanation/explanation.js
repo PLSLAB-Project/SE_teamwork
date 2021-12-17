@@ -5,14 +5,26 @@ Page({
      * 页面的初始数据
      */
     data: {
-
+        number:0,
+        text1:'汝昼食何',
+        text2:'壹二三肆伍六七八九十',
+        text3:'11111111111111',
     },
-
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
 
+    },
+
+    explain(){
+        let that = this
+        setTimeout(function(){
+            let cnt=that.data.number+1
+            that.setData({
+                number:cnt
+            })
+        },5000)
     },
 
     /**

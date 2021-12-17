@@ -20,6 +20,6 @@ App({
     articleId: 10032, //当前推文的id
     musicid: Number,
     session: '19859092005', //手机号
-    score:""//评分
+    score:"nothing"//评分
   }
 })
