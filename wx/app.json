@@ -1,8 +1,8 @@
 {
   "pages":[
+    "pages/speak/speak" ,
     "pages/homepage/homepage",
     "pages/article/article",
-    "pages/speak/speak" ,
     "pages/testInterface/testInterface",
     "pages/articleContent/articleContent",
     "pages/explanation/explanation",
