@@ -2,7 +2,6 @@
 let appData = getApp().globalData;//全局数据
 
 Page({
-
   /**
    * 页面的初始数据
    */
@@ -52,7 +51,11 @@ Page({
     ]
   },
   //访问文章内容
-  toContent: function() {
+  toContent: function(e) {
+    let that = this;
+    console.log(that.data.article);
+    appData.articleId = that.data.article[e.currentTarget.dataset.idx].articleId;
+    console.log(appData.articleId);
     wx.navigateTo({
       url: '../articleContent/articleContent',
     })
@@ -64,9 +67,11 @@ Page({
   },
 
   setArticleList: function() {
+    let that = this;
     console.log("获取文章列表");
     wx.request({
-      url: 'http://127.0.0.1:5000/alwaysRight/getRandomTextId',
+      //url: 'http://127.0.0.1:5000/alwaysRight/getRandomTextId',
+      url: 'http://101.43.7.157:8000/alwaysRight/getRandomTextId',
       data: {cnt: 5},
       header: {'content-type':'application/json'},
       method: 'POST',
@@ -83,11 +88,14 @@ Page({
            appData.articleList.push(
              {
                auth: work[i].author,
-               src: work[i].Content,
-               title: work[i].workName
+               articleId: work[i].id,
+               title: work[i].name
              }
            );
          }
+         that.setData({
+          article: appData.articleList
+         });
       },
       fail: () => {
         console.log("request failed!");
@@ -101,7 +109,6 @@ Page({
    */
   onLoad: function (options) {
     let that = this;
-    that.setArticleList();
     if (appData.articleList.length != 0) {
       that.setData({
         article: appData.articleList
@@ -129,6 +136,7 @@ Page({
    */
   onShow: function () {
     let that = this;
+    that.setArticleList();
     if (appData.articleList.length != 0) {
       that.setData({
         article: appData.articleList

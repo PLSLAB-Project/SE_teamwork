@@ -1,44 +1,71 @@
 // pages/musicPlayer/musicPlayer.js
 let appDate = getApp().globalData;
-Page({
 
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+Page({
   /**
    * 页面的初始数据
    */
   data: {
-    innerAudioContext:Object
+    innerAudioContext:Object,
+    active: false,
+    title: "挪威的森林",
+    auth: "伍佰"
   },
   setToid: function() {
+    sleep(10);
     let that = this;
     that.innerAudioContext = wx.createInnerAudioContext();
     that.innerAudioContext.autoPlay = true;
     that.innerAudioContext.src = appDate.musicList[appDate.musicid].src;
-    setTimeout(that.innerAudioContext.play(), 10);
-    
+    that.setData({
+      active: false
+    });
+    sleep(100);
+    that.innerAudioContext.play();
+    sleep(100);
     console.log(that.innerAudioContext);
+    console.log(that.innerAudioContext.paused);
+    console.log(appDate.musicList);
     console.log(appDate.musicList[appDate.musicid].src);
+    that.setData({
+      auth: appDate.musicList[appDate.musicid].auth,
+      title: appDate.musicList[appDate.musicid].title
+    })
   },
   goPrev: function() {
-    this.innerAudioContext.destroy();
+    let that = this;
+    that.innerAudioContext.destroy();
     appDate.musicid--;
     if (appDate.musicid < 0)
       appDate.musicid += 5;
-    this.setToid();
+    that.setToid();
   },
   goNext: function() {
-    this.innerAudioContext.destroy();
+    let that = this;
+    that.innerAudioContext.destroy();
     appDate.musicid++;
     if (appDate.musicid >= 5)
       appDate.musicid = 0;
-    this.setToid();
+    that.setToid();
   },
   pause: function() {
-    let innerAudioContext = this.innerAudioContext;
+    let that = this;
+    let innerAudioContext = that.innerAudioContext;
+    sleep(100);
     if (innerAudioContext.paused) {
       innerAudioContext.play();
+      that.setData({
+        active: false
+      })
     }
     else {
       innerAudioContext.pause();
+      that.setData({
+        active: true
+      })
     }
   },
   /**

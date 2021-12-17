@@ -41,6 +41,14 @@
     color: white;
     border-radius: 18rpx;
 }
+.auth {
+    font-size: 28rpx;
+    color: #434985;
+}
+.title {
+    font-size: 30rpx;
+    color: #434985;
+}
 .playBox {
     position: relative;
 }
@@ -79,6 +87,10 @@
     height: 54rpx;
 }
 .pause {
+    width: 138rpx;
+    height: 138rpx;
+}
+.start {
     width: 138rpx;
     height: 138rpx;
 }

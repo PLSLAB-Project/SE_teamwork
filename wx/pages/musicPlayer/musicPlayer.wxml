@@ -4,6 +4,13 @@
         <view class="disk">
             <image class="" src="https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/播放音乐-唱片.png" mode="aspectFill"/>
         </view>
+        <view class="title">
+            {{title}}
+        </view>
+        <view class="auth">
+            {{auth}}    
+        </view>
+            
         <view class="collect">
             收藏
         </view>
@@ -13,7 +20,8 @@
             </view>
             <view class="play">
                 <image class="pre" src="https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/播放音乐-上一首.png" mode="aspectFill" bind:tap="goPrev"></image>
-                <image class="pause" src="https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/播放音乐-播放键.png" mode="aspectFill" bind:tap="pause"></image>
+                <image wx:if = "{{active}}" class="pause" src="https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/播放音乐-播放键.png" mode="aspectFill" bind:tap="pause"></image>
+                <image wx:else class="start" src="https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/暂停.png" mode="aspectFill" bind:tap="pause"></image>
                 <image class="nxt" src="https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/播放音乐-下一首.png" mode="aspectFill" bind:tap="goNext"></image>
             </view>
         </view>
