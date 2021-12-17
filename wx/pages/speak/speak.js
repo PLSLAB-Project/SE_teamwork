@@ -3,12 +3,13 @@
 const recorderManager = wx.getRecorderManager();
 const innerAudioContext = wx.createInnerAudioContext();
 let audioPath='';
-let appData = getApp().globalData;
+let app = getApp();
 
 
 //新增
 var value=0;
 let myTimer;
+let mygrade=-1;
 
 Page({
 
@@ -32,6 +33,9 @@ Page({
 
     //开始录音的时候
     start: function () {
+
+        value=0;
+        this.progressView2.drawProgressBar(value, 100);
 
         this.setData({
             isActive:false
@@ -115,6 +119,10 @@ Page({
         //         mypath: ''+res.tempFilePath
         //     })
         })
+
+
+        ////新增
+       // this.uploadAudio();
     },
 
     //播放声音
@@ -148,16 +156,31 @@ Page({
             },
             success: function (res) {
                 console.log(res);
-                 var str = res.data;
-                console.log(str);
-                appData.score = str.score;
-                console.log(appData.score);
+                 let str = res.data;
+                console.log("调接口获取到的"+str);
+                //appData.score = str.score;
+                
+                if(typeof(str.score)== "undefined"){
+                    console.log("接口还未返回数据");
+                }
+                else{
+                    console.log("str里的score"+str.score);
+                    console.log("appData里"+app.globalData.score);
+                }
+                
             },
             fail: function (res) {
                  console.log(res);
             }
             
         });
+
+        if(app.globalData.score!="nothing"){
+            wx.navigateTo({
+                url: '../mark/mark',
+            })
+        }
+       
 
     },
     /**
