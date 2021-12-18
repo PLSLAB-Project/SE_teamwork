@@ -166,21 +166,21 @@ Page({
             },
             success: function (res) {
                 console.log(res);
-                 let str = res.data;
-                let str2=JSON.parse(res.data);
-                console.log("调接口获取到的"+str);
-                console.log("调接口获取到的json"+str2);
-                console.log("str里的score"+str.score);
-                console.log("str2里的score"+str2.score);
+                 //let str = res.data;
+                let myRes=JSON.parse(res.data);
+                //console.log("调接口获取到的"+str);
+                //console.log("调接口获取到的json"+myRes);
+                //console.log("str里的score"+str.score);
+                //console.log("str2里的score"+str2.score);
                 //appData.score = str.score;
                 
-                if(typeof(str2.score)== "undefined"){
+                if(typeof(myRes.score)== "undefined"){
                     console.log("接口还未返回数据");
                 }
                 else{
-                    console.log("str里的score"+str2.score);
-                    app.globalData.score=str2.score;
-                    console.log("appData里"+app.globalData.score);
+                    console.log("myRes里的score"+myRes.score);
+                    app.globalData.score=myRes.score;
+                    //console.log("appData里"+app.globalData.score);
                 }
                 
             },
@@ -213,6 +213,11 @@ Page({
             console.log("超时停止");
             this.stop();
         }
+        // if(app.globalData.score!="nothing"){
+        //     wx.navigateTo({
+        //         url: '../mark/mark',
+        //     })
+        // }
 
     },
 
