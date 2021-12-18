@@ -61,10 +61,11 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  
-   setMusicList: function() {
+  setMusicList: function() {
+    let that = this;
     console.log("获取播放列表");
     wx.request({
+      //url: 'http://127.0.0.1:5000/alwaysRight/getRandomAudio',
       url: 'http://101.43.7.157:8000/alwaysRight/getRandomAudio',
       data: {cnt: 5},
       header: {'content-type':'application/json'},
@@ -82,11 +83,14 @@ Page({
           appData.musicList.push(
             {
               auth: work[i].author,
-              src: work[i].Content,
+              src: work[i].workContent,
               title: work[i].workName
             }
           );
         }
+        that.setData({
+          music: appData.musicList
+        })
       },
       fail: () => {
         console.log("request failed!");
@@ -98,9 +102,7 @@ Page({
 
   onLoad: function (options) {
     let that = this;
-    //界面加载时，请求服务器获取歌曲列表
     //that.setMusicList();
-    //发起请求
     if (appData.musicList.length != 0) {
       that.setData({
         music: appData.musicList
@@ -126,6 +128,7 @@ Page({
    */
   onShow: function () {
     let that = this;
+    that.setMusicList();
     if (appData.musicList.length != 0) {
       that.setData({
         music: appData.musicList
@@ -134,7 +137,7 @@ Page({
     else {
       that.setData({
         music: that.data.tmpMusic
-      });
+      })
       appData.musicList = that.data.tmpMusic;
     }
     console.log(that.data.tmpMusic);

@@ -31,20 +31,23 @@ page {
 .placeholder{
     font-size: 40rpx;
 }
-.denglv{
-    width: 40%;
-    height: 30%;
-    background-color:greenyellow;
+.regandlogin{
+
+    width: 100%;
+    margin-top: 20rpx;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 40rpx;
-    border-radius: 20rpx;
+    flex-direction: row;
+    background-color: #454B86;
 }
-.text1{
-    font-size: 40rpx;
-    font-weight: bolder;
+.reg{
+    width: 40%;
+    height: 100%;
+    border-radius: 10rpx;
+}
+.login{
+    width: 40%;
+    height: 100%;
+    border-radius: 10rpx;
 }
 .user2{
     width: 100%;

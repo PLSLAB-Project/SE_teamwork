@@ -7,11 +7,11 @@
     </view>       
 </view>
 
-<view bind:tap="test" style="height: 300rpx; width: 300rpx; background-color: black;">
+<!-- <view bind:tap="test" style="height: 300rpx; width: 300rpx; background-color: black;">
     
 </view>
-<view bind:tap="get" style="height: 300rpx; width: 300rpx; background-color: blue;">
+<view bind:tap="getArticleContent" style="height: 300rpx; width: 300rpx; background-color: blue;">
     
-</view>
+</view> -->
   
   

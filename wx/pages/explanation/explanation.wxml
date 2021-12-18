@@ -2,17 +2,10 @@
 <page>
     <!-- 背景图 -->
     <image class="background" src="https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/背景.png" mode="aspectFill"></image>
-    <!-- 空白透明view站位 -->
-    <view class="empty"></view>
-    <!-- 点击开始录音转换 -->
-    <view class="box1" >
-        <text class="text1">点击麦克风开始转换</text>
-        <image class="mai" src="https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/首页-话筒.png" mode="aspectFit"  bindtap="explain"></image>
-    </view>
+    <button class="btn1" bindtap="startRecord">录音</button>
+    <button class="btn2" bindtap="translate">转换</button>
     <view class="explain">
         <text class="text2" >释 义</text>
-        <text  wx:if="{{number==1}}" class="explanation">{{text1}}</text>
-        <text  wx:if="{{number==2}}" class="explanation">{{text2}}</text>
-        <text  wx:if="{{number==3}}" class="explanation">{{text3}}</text>
+        <text class="explanation">{{text}}</text>
     </view>
 </page>

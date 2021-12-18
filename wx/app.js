@@ -17,9 +17,10 @@ App({
     userInfo: null,
     musicList: [], // 音乐列表
     articleList: [], //推文列表
-    articleId: Number, //当前推文的id
+    articleId: 10032, //当前推文的id
     musicid: Number,
     session: '19859092005', //手机号
-    score:"nothing"//评分
+    score:"nothing",//评分
+    text:'',
   }
 })

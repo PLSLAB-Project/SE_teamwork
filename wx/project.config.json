@@ -1,12 +1,7 @@
 {
     "description": "项目配置文件",
     "packOptions": {
-        "ignore": [
-            {
-                "type": "file",
-                "value": ".eslintrc.js"
-            }
-        ]
+        "ignore": []
     },
     "setting": {
         "urlCheck": false,
@@ -41,16 +36,12 @@
         "packNpmManually": false,
         "packNpmRelationList": [],
         "minifyWXSS": true,
-        "disableUseStrict": false,
-        "minifyWXML": true,
-        "showES6CompileOption": false,
-        "useCompilerPlugins": false
+        "showES6CompileOption": false
     },
     "compileType": "miniprogram",
-    "libVersion": "2.20.2",
-    "appid": "wx06e5ad284d61d7e2",
-    "projectname": "minnanyu",
-
+    "libVersion": "2.21.2",
+    "appid": "wxccc2c52c83b61b16",
+    "projectname": "wx12-27",
     "debugOptions": {
         "hidedInDevtools": []
     },

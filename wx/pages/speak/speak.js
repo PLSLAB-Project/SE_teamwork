@@ -157,7 +157,7 @@ Page({
     uploadAudio:function(){
          console.log("Test_uploadAudio4Score");
          wx.uploadFile({
-            url: 'http://101.43.7.157:8000/alwaysRight/uploadAudio4Score',
+            url: 'http://127.0.0.1:5000/alwaysRight/uploadAudio4Score',
             filePath: audioPath,
             name: 'audio',
             header: {

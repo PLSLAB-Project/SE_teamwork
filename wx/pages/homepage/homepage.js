@@ -1,37 +1,51 @@
 // pages/homepage/homepage.js
-Page({
 
+let appData = getApp().globalData;//全局数据
+
+Page({
     data: {
-      list:[
-      {title:'闽南话的魅力',
-        write:'陈建新',
-        src:'https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/首页-矩形框图片1.png'
+      list:[],
+      tmplist: [{
+        name: "闽南话的魅力",
+        author: "陈建新",
+        articleId: 1
       },
       {
-        title:'学听闽南话',
-        write:'黄芩',
-        src:'https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/首页-矩形框图片2.png'
+        name: "学听闽南话",
+        author: "黄岑",
+        articleId: 2
       },
       {
-        title:'闽南语抗疫热词TOP9',
-        write:'小南',
-        src:'https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/首页-矩形框图片3.png'
+        name: "闽南语抗疫热词TOP9",
+        author: "小南",
+        articleId: 3
       },
       {
-        title:'听阿姆讲童谣',
-        write:'小北',
-        src:'https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/首页-矩形框图片1.png'
+        name: "一片冰心在玉壶",
+        author: "世界华声音",
+        articleId: 4
       },
       {
-        title:'听阿姆讲童谣',
-        write:'小北',
-        src:'https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/首页-矩形框图片4.png'
+        name: "澎湃海丝情",
+        author: "晋江电视台",
+        articleId: 5
       },
       {
-        title:'学听闽南话',
-        write:'黄芩',
-        src:'https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/首页-矩形框图片2.png'
+        name: "闽南听语",
+        author: "文学顾事",
+        articleId: 6
+      },
+      {
+        name: "闽南三江知青红",
+        author: "闽南旅游",
+        articleId: 7
       }
+    ],
+      renderImgUrl:[
+        "https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/首页-矩形框图片1.png",
+        "https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/首页-矩形框图片2.png",
+        "https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/首页-矩形框图片3.png",
+        "https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/首页-矩形框图片4.png"
       ],
     },
     turn_to_explanation(){
@@ -39,43 +53,62 @@ Page({
           url: '../explanation/explanation',
         })
     },
-
-
+    toContent: function(e) {
+      appData.articleId = this.data.list[e.currentTarget.dataset.idx].articleId;
+      // console.log(this.data.list[e.currentTarget.dataset.idx].articleId)
+      wx.navigateTo({
+        url: '../articleContent/articleContent',
+      })
+    },
     /**
      * 生命周期函数--监听页面加载
      */
-    onLoad: function (options) {
-      let that = this 
-        wx.request({
-        method: 'POST',
-        url: 'http://101.43.7.157:8000/alwaysRight/getRandomWork', 
-        header: {
-            'content-type': 'application/json' // 默认值
-        },
-        data:{},
-        success: function (res) {
-            console.log(res)
-            
-        },
-        fail: function () {
-        console.log("fail")
-        },
-        })
-         
+    onLoad: function (options) { 
     },
 
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
     onReady: function () {
-
+      let that = this;
+      console.log("获取主页文章列表");
+      wx.request({
+        url: 'http://101.43.7.157:8000/alwaysRight/getRandomTextId',
+        data: {cnt: 6},
+        header: {'content-type':'application/json'},
+        method: 'POST',
+        dataType: 'json',
+        responseType: 'text',
+        success: (res) => {
+          console.log("主页request success!");
+          console.log(res.data.randomWork);
+          that.setData({
+            list:res.data.randomWork
+          })
+        },
+        fail: () => {
+          console.log("主页request failed!");
+          that.setData({
+            list:that.data.tmplist
+          })
+        },
+        complete: () => {
+        },
+        
+      });
+      if(this.data.list.length==0){
+        this.setData({
+          list:this.data.tmplist
+        })
+      }
+      
     },
 
     /**
      * 生命周期函数--监听页面显示
      */
     onShow: function () {
-
+      
     },
 
     /**
