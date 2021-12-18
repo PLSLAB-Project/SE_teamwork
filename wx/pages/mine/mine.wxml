@@ -5,8 +5,9 @@
       <!-- 用户显示区域 -->
       <view  class="user1"> 
         <input type="text" placeholder="请输入绑定手机号以登录" placeholder-class="placeholder" maxlength="11" bindinput="getsession" class="input"></input>
-        <view class="denglv" bindtap="getUserProfile"> 
-          <text class="text1">登 录</text> 
+        <view class="regandlogin">
+          <button class="reg" bindtap="reg"> 注 册 </button>
+          <button class="login" bindtap="login"> 登 录 </button>
         </view> 
       </view>
       <!-- 未登录时的收藏与记录 -->
@@ -45,7 +46,8 @@
         <view class="userinfo-nickname">
             <text class="text4">{{userInfo.nickName}}</text>
         </view>
-        <image class="logout" bindtap="noUserProfile" src="https://c1.im5i.com/2021/11/17/JxZ14.png"></image>
+        <view bindtap="check">check</view>
+        <image class="logout" bindtap="logout" src="https://s2.loli.net/2021/12/18/iycgUhqJlFIanCf.png"></image>
       </view>
       <!-- 登录后的收藏与记录 -->
       <view class="collection">

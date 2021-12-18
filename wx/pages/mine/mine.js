@@ -80,48 +80,116 @@ Page({
     onLoad() {
       this.changeline();
     },
-
+    // 获得输入框里的session
     getsession(res){
       this.setData({
         session:res.detail.value
       })
       console.log(this.data.session)
     },
-
-    getUserProfile(e) {
+    // 注册
+    reg(){
+      console.log(this.data.session.length)
       console.log(this.data.session)
-        let that = this 
+      let that = this
         wx.request({
-        method: 'POST',
-        url: 'http://101.43.7.157:8000/alwaysRight/logIn', 
-        header: {
-            'content-type': 'application/json' // 默认值
-        },
-        data: {
-          Phone: that.data.session,//这里的phone参数是某用户的电话号码
-        },
-        success: function (res) {
-          console.log(that.data.session)
-        },
-        })
-
-      // 推荐使用wx.getUserProfile获取用户信息，开发者每次通过该接口获取用户个人信息均需用户确认
-      // 开发者妥善保管用户快速填写的头像昵称，避免重复弹窗
+          url: 'http://101.43.7.157:8000/alwaysRight/reg', 
+          method: 'POST',
+          header: {
+              'content-type': 'application/json' // 默认值
+          },
+          dataType:'json',  
+          data:{phone:that.data.session},//这里的phone参数是某用户的电话号码
+          success: function (res) {
+            console.log("reg success");
+            console.log(res);
+            wx.showToast({
+              title: '注册成功',
+            })
+          },
+          fail:function(res){
+            console.log("reg 失败");
+            wx.showToast({
+              title: '注册失败',
+            })
+          },
+       })
+    },
+    //登录 
+    login() {
+      console.log(this.data.session.length)
+      console.log(this.data.session)
+      let that = this
+      wx.request({
+            url: 'http://101.43.7.157:8000/alwaysRight/logIn', 
+            method: 'POST',
+            header: {
+                'content-type': 'application/json' // 默认值
+            },
+            dataType:'json',  
+            data:{phone:that.data.session},//这里的phone参数是某用户的电话号码
+            success: function (res) {
+              console.log("login success");
+              console.log(res);
+              console.log(that.data.session)
+            },
+            fail:function(res){
+              console.log("登录失败");
+            },
+      })
       wx.getUserProfile({
         desc: '用于完善会员资料', // 声明获取用户个人信息后的用途，后续会展示在弹窗中，请谨慎填写
         success: (res) => {
-          this.setData({
+          that.setData({
             userInfo: res.userInfo,
             islogin: true
           })
         }
       })
     },
-    noUserProfile(e) {
+    // 登出
+    logout() {
           this.setData({
             islogin: false
           })
+          wx.request({
+            url: 'http://101.43.7.157:8000/alwaysRight/logOut',
+            method: 'POST',
+            header: {
+                'content-type': 'application/json' // 默认值
+            },
+            dataType:'json',  
+            success: function (res) {
+              console.log("logout success");
+              console.log(res);
+            },
+            fail:function(res){
+              console.log("登出失败");
+            },
+
+          })
     },
+    // 检测是否登录态，返回msg为1表示已登录。
+    check(){
+      console.log('checking');
+      wx.request({
+        url: 'http://101.43.7.157:8000/alwaysRight/checkLogin',
+        method:'POST',
+        header: {
+          'content-type': 'application/json' // 默认值
+        },
+        data:{msg:1},
+        dataType:'json',
+        success: (res) => {
+          console.log("检测成功!");
+          console.log(res.data);
+        },
+        fail: () => {
+          console.log("检测失败");
+        },
+      })
+    },
+
     changeTab:function(e){
       this.setData({
        currentIndex: e.currentTarget.dataset.aa

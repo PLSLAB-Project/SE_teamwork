@@ -35,7 +35,6 @@ Page({
         recorderManager.onError((res) => {
             console.log(res);
         })
-
     },
 
     translate(){
@@ -44,9 +43,6 @@ Page({
         recorderManager.onStop((res) => {
             this.tempFilePath = res.tempFilePath;
             console.log('停止录音', res.tempFilePath)
-            const { tempFilePath } = res
-            // audioPath=res.tempFilePath;
-            // self.uploadAudio();
              wx.uploadFile({
                 url: 'http://101.43.7.157:8000/alwaysRight/uploadAudio4text',
                 filePath: res.tempFilePath,
@@ -60,11 +56,11 @@ Page({
                 success: function (res) {
                     console.log('ok');
                     console.log(res);
-                    let str = res.data;
+        //             let str = res.data;
                     let str2=JSON.parse(res.data);
-                    console.log("调接口获取到的"+str);
+                    // console.log("调接口获取到的"+str);
                     console.log("调接口获取到的json"+str2);
-                    console.log("str里的score"+str.text);
+                    // console.log("str里的score"+str.text);
                     console.log("str2里的score"+str2.text);
                     if(typeof(str2.text)== "undefined"){
                         console.log("接口还未返回数据");

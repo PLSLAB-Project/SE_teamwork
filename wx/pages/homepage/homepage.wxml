@@ -24,7 +24,7 @@
         <image class="picture2" src="https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/首页-小鹤.png"></image>
         <!-- 文章列表 -->
         <scroll-view scroll-y="true" class="article_container" >
-                <view class="article" wx:for="{{list}}" wx:key="index" wx:for-index="idx" data-idx="{{idx}}" bind:tap="toContent">
+                <view class="article" wx:for="{{list}}" wx:key="index" wx:for-index="idx"  bind:tap="toContent">
                     <view class="text">
                         <text class="title">{{item.name}}</text>
                         <text class="write">{{item.author}}</text>

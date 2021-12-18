@@ -79,8 +79,6 @@ Page({
       responseType: 'text',
       success: (res) => {
         console.log("request success!");
-        //res.data.randomWork
-        //console.log(res);
         console.log(res.data.randomWork);
         let work = res.data.randomWork;
         appData.articleList = [];

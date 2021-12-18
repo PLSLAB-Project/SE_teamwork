@@ -3,14 +3,13 @@
 let appData = getApp().globalData;//全局数据
 
 Page({
-
     data: {
       list:[],
       renderImgUrl:[
-        'https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/首页-矩形框图片1.png',
-        'https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/首页-矩形框图片2.png',
-        'https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/首页-矩形框图片3.png',
-        'https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/首页-矩形框图片4.png'
+        "https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/首页-矩形框图片1.png",
+        "https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/首页-矩形框图片2.png",
+        "https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/首页-矩形框图片3.png",
+        "https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/首页-矩形框图片4.png"
       ],
     },
     turn_to_explanation(){
@@ -23,7 +22,6 @@ Page({
         url: '../articleContent/articleContent',
       })
     },
-
     /**
      * 生命周期函数--监听页面加载
      */
@@ -34,34 +32,35 @@ Page({
      * 生命周期函数--监听页面初次渲染完成
      */
     onReady: function () {
-      let that = this
+      let that = this;
+      console.log("获取主页文章列表");
       wx.request({
         url: 'http://101.43.7.157:8000/alwaysRight/getRandomTextId',
-        data: {cnt: 6},
+        data: {cnt: 1},
         header: {'content-type':'application/json'},
         method: 'POST',
         dataType: 'json',
         responseType: 'text',
         success: (res) => {
-          console.log("request success!");
+          console.log("主页request success!");
           console.log(res.data.randomWork);
-          that.setData({
-            list:res.data.randomWork
-          })
+           that.setData({
+             list:res.data.randomWork
+           })
         },
         fail: () => {
-          console.log("request failed!");
+          console.log("主页request failed!");
         },
         complete: () => {
         }
-      });    
+      });
     },
 
     /**
      * 生命周期函数--监听页面显示
      */
     onShow: function () {
-
+      
     },
 
     /**
