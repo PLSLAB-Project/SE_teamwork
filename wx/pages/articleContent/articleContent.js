@@ -37,7 +37,7 @@ Page({
         let title = val[0];
         for (let i = 2; i < val.length; ++i)
           appData.articleList.push(val[i]);
-        console.log(appData.articleList);
+          console.log(appData.articleList);
         that.setData({
           content: appData.articleList,
           auth: auth,

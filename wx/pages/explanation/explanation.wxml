@@ -6,8 +6,6 @@
     <button class="btn2" bindtap="translate">转换</button>
     <view class="explain">
         <text class="text2" >释 义</text>
-        <text  wx:if="{{number==1}}" class="explanation">{{text1}}</text>
-        <text  wx:if="{{number==2}}" class="explanation">{{text2}}</text>
-        <text  wx:if="{{number==3}}" class="explanation">{{text3}}</text>
+        <text class="explanation">{{text}}</text>
     </view>
 </page>

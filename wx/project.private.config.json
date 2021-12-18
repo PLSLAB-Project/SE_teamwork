@@ -29,6 +29,18 @@
                     "pathName": "pages/mine/mine",
                     "query": "",
                     "scene": null
+                },
+                {
+                    "name": "pages/testInterface/testInterface",
+                    "pathName": "pages/testInterface/testInterface",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/article/article",
+                    "pathName": "pages/article/article",
+                    "query": "",
+                    "scene": null
                 }
             ]
         }

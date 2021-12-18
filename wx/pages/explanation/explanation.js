@@ -6,7 +6,7 @@ Page({
      * 页面的初始数据
      */
     data: {
-        text:'',
+        text:'请点击录音说话，说完点击转换',
     },
     /**
      * 生命周期函数--监听页面加载
@@ -38,7 +38,7 @@ Page({
     },
 
     translate(){
-        let self=this;
+        let that=this;
         recorderManager.stop();
         recorderManager.onStop((res) => {
             this.tempFilePath = res.tempFilePath;
@@ -54,29 +54,21 @@ Page({
                     key: 'audio'//这里是为文件设置上传后的文件名
                 }, 
                 success: function (res) {
-                    console.log('ok');
+                    console.log('请求转换接口成功');
                     console.log(res);
-        //             let str = res.data;
-                    let str2=JSON.parse(res.data);
-                    // console.log("调接口获取到的"+str);
-                    console.log("调接口获取到的json"+str2);
-                    // console.log("str里的score"+str.text);
-                    console.log("str2里的score"+str2.text);
-                    if(typeof(str2.text)== "undefined"){
-                        console.log("接口还未返回数据");
-                    }
-                    else{
-                        console.log("str里的text"+str2.text);
-                        app.globalData.text=str2.text;
-                        console.log("appData里"+app.globalData.text);
-                    }
+                    that.setData({
+                        text:res.data.text
+                    })
                 },
                 fail: function (res) {
-                    console.log("fail!");
-                    console.log(res);
+                    console.log("请求转换接口失败!");
+                    that.setData({
+                        text:'请求接口失败，请登录后再尝试'
+                    })
                 }                      
             });
         })
+        
     },
     /**
      * 生命周期函数--监听页面初次渲染完成
