@@ -12,17 +12,18 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-
     },
-
     startRecord(){
+        this.setData({
+            text:'录音中......'
+        })
         let that = this;
         const options = {
             duration: 61000,//指定录音的时长，单位 ms
             sampleRate: 16000,//采样率
             numberOfChannels: 1,//录音通道数
             encodeBitRate: 96000,//编码码率
-            format: 'wav',//音频格式，有效值 aac/mp3
+            format: 'aac',//音频格式，有效值 aac/mp3
             frameSize: 50,//指定帧大小，单位 KB
         }
         // 开始录音
@@ -36,17 +37,20 @@ Page({
             console.log(res);
         })
     },
-
     translate(){
+        this.setData({
+            text:'正在转换中......'
+        })
         let that=this;
         recorderManager.stop();
         recorderManager.onStop((res) => {
             this.tempFilePath = res.tempFilePath;
             console.log('停止录音', res.tempFilePath)
              wx.uploadFile({
-                url: 'http://101.43.7.157:8000/alwaysRight/uploadAudio4text',
+                // url: 'http://101.43.7.157:8000/alwaysRight/uploadAudio4text',
+                url: 'http://101.43.7.157:8000/alwaysRight/uploadAudio4text',
                 filePath: res.tempFilePath,
-                name: 'file',
+                name: 'audio',
                 header: {
                           'content-type': 'multipart/form-data'
                 },
@@ -55,9 +59,12 @@ Page({
                 }, 
                 success: function (res) {
                     console.log('请求转换接口成功');
-                    console.log(res);
+                    console.log(res.data);
+                    let str2=JSON.parse(res.data);
+                    console.log("调接口获取到的json"+str2);
+                    console.log("str2里的score"+str2.score);
                     that.setData({
-                        text:res.data.text
+                        text:str2
                     })
                 },
                 fail: function (res) {
@@ -68,7 +75,6 @@ Page({
                 }                      
             });
         })
-        
     },
     /**
      * 生命周期函数--监听页面初次渲染完成

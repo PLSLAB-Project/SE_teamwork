@@ -146,6 +146,9 @@ Page({
         header: {
             'content-type': 'application/json' // 默认值
         },
+        data:{cnt:6},
+        dataType:'json',
+        responseType:'text',
         success: function (res) {
             console.log(res)
         },
