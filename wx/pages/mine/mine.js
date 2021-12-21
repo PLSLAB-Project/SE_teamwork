@@ -66,8 +66,7 @@ Page({
       src:'https://cdn.jsdelivr.net/gh/Taj-x/images@main/img/首页-矩形框图片2.png',
       time:"2021-11-19"
     }],
-      
-
+    
       session:"",
       userInfo: {},
       islogin:false,
@@ -131,21 +130,21 @@ Page({
             success: function (res) {
               console.log("login success");
               console.log(res);
-              wx.request({
-                url: 'http://101.43.7.157:8000/alwaysRight/checkLogin',
-                method:'POST',
-                header: {
-                  'content-type': 'application/json' // 默认值
-                },
-                dataType:'json',
-                success: (res) => {
-                  console.log("检测成功!");
-                  console.log(res.data);
-                },
-                fail: () => {
-                  console.log("检测失败");
-                },
-              })
+              // wx.request({
+              //   url: 'http://101.43.7.157:8000/alwaysRight/checkLogin',
+              //   method:'POST',
+              //   header: {
+              //     'content-type': 'application/json' // 默认值
+              //   },
+              //   dataType:'json',
+              //   success: (res) => {
+              //     console.log("检测成功!");
+              //     console.log(res.data);
+              //   },
+              //   fail: () => {
+              //     console.log("检测失败");
+              //   },
+              // })
             },
             fail:function(res){
               console.log("登录失败");
@@ -192,7 +191,6 @@ Page({
         header: {
           'content-type': 'application/json' // 默认值
         },
-        data:{msg:1},
         dataType:'json',
         success: (res) => {
           console.log("检测成功!");
