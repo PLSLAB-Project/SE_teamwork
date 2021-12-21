@@ -54,8 +54,9 @@ Page({
         })
     },
     toContent: function(e) {
-      appData.articleId = this.data.list[e.currentTarget.dataset.idx].articleId;
-      // console.log(this.data.list[e.currentTarget.dataset.idx].articleId)
+      let that = this;
+      appData.articleId = that.data.list[e.currentTarget.dataset.idx].id;
+      console.log(appData.articleId);
       wx.navigateTo({
         url: '../articleContent/articleContent',
       })
@@ -92,22 +93,46 @@ Page({
             list:that.data.tmplist
           })
         },
-        complete: () => {
-        },
-        
       });
       if(this.data.list.length==0){
         this.setData({
           list:this.data.tmplist
         })
       }
-      
     },
 
     /**
      * 生命周期函数--监听页面显示
      */
     onShow: function () {
+      let that = this;
+      console.log("获取主页文章列表");
+      wx.request({
+        url: 'http://101.43.7.157:8000/alwaysRight/getRandomTextId',
+        data: {cnt: 6},
+        header: {'content-type':'application/json'},
+        method: 'POST',
+        dataType: 'json',
+        responseType: 'text',
+        success: (res) => {
+          console.log("主页request success!");
+          console.log(res.data.randomWork);
+          that.setData({
+            list:res.data.randomWork
+          })
+        },
+        fail: () => {
+          console.log("主页request failed!");
+          that.setData({
+            list:that.data.tmplist
+          })
+        },
+      });
+      if(this.data.list.length==0){
+        this.setData({
+          list:this.data.tmplist
+        })
+      }
       
     },
 

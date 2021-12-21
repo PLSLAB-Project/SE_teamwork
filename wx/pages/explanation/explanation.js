@@ -23,7 +23,7 @@ Page({
             sampleRate: 16000,//采样率
             numberOfChannels: 1,//录音通道数
             encodeBitRate: 96000,//编码码率
-            format: 'aac',//音频格式，有效值 aac/mp3
+            format: 'wav',//音频格式，有效值 aac/mp3
             frameSize: 50,//指定帧大小，单位 KB
         }
         // 开始录音
@@ -47,7 +47,6 @@ Page({
             this.tempFilePath = res.tempFilePath;
             console.log('停止录音', res.tempFilePath)
              wx.uploadFile({
-                // url: 'http://101.43.7.157:8000/alwaysRight/uploadAudio4text',
                 url: 'http://101.43.7.157:8000/alwaysRight/uploadAudio4text',
                 filePath: res.tempFilePath,
                 name: 'audio',
@@ -61,18 +60,18 @@ Page({
                     console.log('请求转换接口成功');
                     console.log(res.data);
                     let str2=JSON.parse(res.data);
-                    console.log("调接口获取到的json"+str2);
-                    console.log("str2里的score"+str2.score);
+                    console.log("str2里的text: "+str2.text);
                     that.setData({
-                        text:str2
+                        text:str2.text
                     })
                 },
                 fail: function (res) {
                     console.log("请求转换接口失败!");
+                    console.log(res);
                     that.setData({
                         text:'请求接口失败，请登录后再尝试'
                     })
-                }                      
+                }                     
             });
         })
     },
