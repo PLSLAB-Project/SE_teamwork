@@ -11,11 +11,53 @@ Page({
   data: {
     innerAudioContext:Object,
     active: false,
-    title: "挪威的森林",
-    auth: "伍佰"
+    title: "",
+    auth: "",
+    workId: ""
+  },
+  collect: function() {
+    let that = this;
+    console.log("收藏");
+    wx.request({
+      //url: 'http://127.0.0.1:5000/alwaysRight/addMarks',
+      url: 'http://101.43.7.157:8000/alwaysRight/addMarks',
+      data: {phone:appDate.session, workId: that.data.workId},
+      header: {'content-type':'application/json'},
+      method: 'POST',
+      dataType: 'json',
+      responseType: 'text',
+      success: (res) => {
+        console.log("request success!");
+      },
+      fail: () => {
+        console.log("request failed!");
+      },
+      complete: () => {
+      }
+    });
+  },
+  scan: function() {
+    let that = this;
+    console.log("浏览");
+    wx.request({
+      url: 'http://127.0.0.1:5000/alwaysRight/getAudioEvent',
+      //url: 'http://101.43.7.157:8000/alwaysRight/getAudioEvent',
+      data: {phone:appDate.session, workId: that.data.workId},
+      header: {'content-type':'application/json'},
+      method: 'POST',
+      dataType: 'json',
+      responseType: 'text',
+      success: (res) => {
+        console.log("request success!");
+      },
+      fail: () => {
+        console.log("request failed!");
+      },
+      complete: () => {
+      }
+    });
   },
   setToid: function() {
-    sleep(10);
     let that = this;
     that.innerAudioContext = wx.createInnerAudioContext();
     that.innerAudioContext.autoPlay = true;
@@ -23,24 +65,20 @@ Page({
     that.setData({
       active: false
     });
-    sleep(100);
     that.innerAudioContext.play();
-    sleep(100);
-    console.log(that.innerAudioContext);
-    console.log(that.innerAudioContext.paused);
-    console.log(appDate.musicList);
-    console.log(appDate.musicList[appDate.musicid].src);
     that.setData({
       auth: appDate.musicList[appDate.musicid].auth,
-      title: appDate.musicList[appDate.musicid].title
+      title: appDate.musicList[appDate.musicid].title,
+      workId: appDate.musicList[appDate.musicid].workId
     })
   },
   goPrev: function() {
     let that = this;
     that.innerAudioContext.destroy();
     appDate.musicid--;
-    if (appDate.musicid < 0)
+    if (appDate.musicid < 0) 
       appDate.musicid += 5;
+    that.scan();
     that.setToid();
   },
   goNext: function() {
@@ -49,12 +87,13 @@ Page({
     appDate.musicid++;
     if (appDate.musicid >= 5)
       appDate.musicid = 0;
+    that.scan();
     that.setToid();
   },
   pause: function() {
     let that = this;
     let innerAudioContext = that.innerAudioContext;
-    sleep(100);
+    sleep(10);
     if (innerAudioContext.paused) {
       innerAudioContext.play();
       that.setData({

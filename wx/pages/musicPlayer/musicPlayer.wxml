@@ -11,7 +11,7 @@
             {{auth}}    
         </view>
             
-        <view class="collect">
+        <view class="collect" bind:tap="collect">
             收藏
         </view>
         <view class="playBox">

@@ -10,26 +10,31 @@ Page({
   data: {
     tmpMusic: [
     {
+      workId: 20022,
       title: "浪子的心",
       src: "http://music.163.com/song/media/outer/url?id=1823600073.mp3",
       auth: "卓依婷"
     },
     {
+      workId: 20022,
       title: "用生命所爱的人",
       src: "http://music.163.com/song/media/outer/url?id=157288.mp3",
       auth: "闽南语"
     },
     {
+      workId: 20022,
       title: "有梦尚美",
       src: "http://music.163.com/song/media/outer/url?id=109505.mp3",
       auth: "蔡小虎"
     },
     {
+      workId: 20022,
       title: "爱到才知痛",
       src: "http://music.163.com/song/media/outer/url?id=221314.mp3",
       auth: "贺一航"
     },
     {
+      workId: 20022,
       title: "喜欢就好",
       src: "http://music.163.com/song/media/outer/url?id=33469247.mp3",
       auth: "林玉英"
@@ -56,7 +61,7 @@ Page({
       wx.navigateBack({
         delta: 1
       });
-
+ 
     },
   /**
    * 生命周期函数--监听页面加载
@@ -76,7 +81,7 @@ Page({
         console.log("request success!");
         //res.data.randomWork
         //console.log(res);
-        console.log(res.data.randomWork);
+        console.log(res.data);
         let work = res.data.randomWork;
         appData.musicList = [];
         for (let i = 0; i < 5; ++i) {
@@ -84,7 +89,8 @@ Page({
             {
               auth: work[i].author,
               src: work[i].workContent,
-              title: work[i].workName
+              title: work[i].workName,
+              workId: work[i].workId
             }
           );
         }
